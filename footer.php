@@ -1,5 +1,5 @@
 <!-- signup field -->
-<section class="signup_section  section_spacing_top_small">
+ <!-- <section class="signup_section  section_spacing_top_small">
     <div class="container">
         <?php
         $footer_text = get_field('footer_text', 'option');
@@ -7,13 +7,17 @@
         $sign_up_link_demo = get_field('sign_up_link_demo', 'option'); ?>
         <div class="text_center">
 
-            <h2>Som text and buttons here..</h2>
+            <h2>Välkommen att kontakta oss!</h2>
+            <div class="angle">
+            <i class="fa-solid fa-angle-down"></i>
+            </div>
+
             <?php if ($footer_text) { ?>
                 <?php echo $footer_text; ?>
             <?php
             } ?>
         </div>
-        <div class="btn_container">
+      <div class="btn_container">
             <?php if ($sign_up_link) { ?>
                 <a class="btn_link green" href="<?php echo $sign_up_link['url']; ?>" target="<?php echo $sign_up_link['target']; ?>" rel="noopener noreferrer"><?php echo $sign_up_link['title']; ?>
                 </a>
@@ -22,9 +26,9 @@
                 <a class="btn_link outline_color_dark" href="<?php echo $sign_up_link_demo['url']; ?>" target="<?php echo $sign_up_link_demo['target']; ?>" rel="noopener noreferrer"><?php echo $sign_up_link_demo['title']; ?>
                 </a>
             <?php } ?>
-        </div>
+        </div> 
     </div>
-</section>
+</section>  -->
 
 <!-- footer -->
 <footer id="footer" class="footer_main section_spacing_top_small darkgreen">
@@ -34,9 +38,9 @@
                 <div class="logo_footer">
                     <a href="<?php echo home_url() ?>" class="logo" aria-label="Home page">
                         <!-- <h2 class="colored_light_green_part">Sample site logo</h2> -->
-                                   <img
+                        <img
                             src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_01.png"
-                            width="100" height="auto" alt="Kindmarks logo" /> 
+                            width="100" height="auto" alt="Kindmarks logo" />
                         <!-- <img class="logo_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse.png" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse@2x.png 325w" width="208" height="51" alt="Boozang home page" /> -->
                     </a>
                 </div>

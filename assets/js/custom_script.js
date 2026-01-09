@@ -1,34 +1,33 @@
 jQuery(document).ready(function ($) {
   //latest_updates_section
-  $(".updates_tabs li:first").find("a").addClass("active");
-  $(".updates_tab_content").hide();
-  $(".updates_tab_content:first").show();
-  // Click function
-  $(".updates_tabs li").click(function () {
-    $(".updates_tabs li a").removeClass("active");
-    $(this).find("a").addClass("active");
-    $(".updates_tab_content").hide();
+  // $(".updates_tabs li:first").find("a").addClass("active");
+  // $(".updates_tab_content").hide();
+  // $(".updates_tab_content:first").show();
+  // // Click function
+  // $(".updates_tabs li").click(function () {
+  //   $(".updates_tabs li a").removeClass("active");
+  //   $(this).find("a").addClass("active");
+  //   $(".updates_tab_content").hide();
 
-    var activeTab = $(this).find("a").attr("href");
-    $(activeTab).fadeIn();
-    return false;
-  });
+  //   var activeTab = $(this).find("a").attr("href");
+  //   $(activeTab).fadeIn();
+  //   return false;
+  // });
 
   //faq_accordion_section
   //toggle aria-attribute and style state open
-    $(".accordion_btn").click(function (e) {
-    e.currentTarget.classList.toggle("open");
-    $(this).attr("aria-expanded", function (index, attr) {
-      return attr == "true" ? "false" : "true";
-    });
-  });
-
+  //   $(".accordion_btn").click(function (e) {
+  //   e.currentTarget.classList.toggle("open");
+  //   $(this).attr("aria-expanded", function (index, attr) {
+  //     return attr == "true" ? "false" : "true";
+  //   });
+  // });
 
   // $(window).on("load", function () {
-  var path = window.location.pathname;
-  if (path.indexOf("blog") >= 0) {
-    $(".most-recent").addClass("current-misse");
-  }
+  // var path = window.location.pathname;
+  // if (path.indexOf("blog") >= 0) {
+  //   $(".most-recent").addClass("current-misse");
+  // }
   // });
   //Menu Desktop
   //toggle class
@@ -70,6 +69,28 @@ jQuery(document).ready(function ($) {
     $(this).children("ul").toggleClass("sub-menu-open");
   });
 
+  //feature slider
+  $(".thumbnails").find(">:first-child").addClass("active"); //set active class on first thumbnail
+  $(".big_images").find(">:first-child").addClass("active"); //set active class on first big image
 
+  $(".thumbnail_item").click(function () {
+    //click on thumbnail
+
+    let activeThumb = $(this).parent().find(".thumbnail_item.active");
+
+    activeThumb.removeClass("active"); //remove active class on thumbnail
+    $(this).addClass("active"); // set active class on current thumbnail
+
+    let activeThumbIndex = $(this).index(); //index of current thumbnail
+
+    let bigImage = $(this)
+      .closest(".image_slider_wrapper")
+      .find(".big_img_item");
+
+    bigImage.removeClass("active");
+    let bigImageAtIndex = bigImage[activeThumbIndex]; //index of corrispondent big image
+
+    $(bigImageAtIndex).addClass("active"); // set active class on big image
+  });
 });
 document.ready;

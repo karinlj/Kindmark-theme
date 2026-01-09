@@ -22,7 +22,7 @@ function favicon()
     <meta name="theme-color" content="#ffffff">
 
 <?php }
-add_action('wp_head', 'favicon', 99);
+// add_action('wp_head', 'favicon', 99);
 
 
 //remove emoji support

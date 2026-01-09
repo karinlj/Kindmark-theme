@@ -36,7 +36,6 @@ function google_fonts()
 {
     //Av någon anledning knasar det med wp_enqueue_script
 ?>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 <?php
 }

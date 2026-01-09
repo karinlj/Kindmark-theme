@@ -156,6 +156,46 @@ img {
   }
 }
 
+.margin_2 {
+  margin-bottom: 1.5rem;
+}
+@media all and (min-width: 992px) {
+  .margin_2 {
+    margin-bottom: 2rem;
+  }
+}
+
+.margin_3 {
+  margin-bottom: 2rem;
+}
+@media all and (min-width: 992px) {
+  .margin_3 {
+    margin-bottom: 3rem;
+  }
+}
+
+.margin_4 {
+  margin-bottom: 3rem;
+}
+@media all and (min-width: 992px) {
+  .margin_4 {
+    margin-bottom: 4rem;
+  }
+}
+
+.margin_5 {
+  margin-bottom: 4rem;
+}
+@media all and (min-width: 992px) {
+  .margin_5 {
+    margin-bottom: 5rem;
+  }
+}
+
+.reversed {
+  flex-direction: row-reverse;
+}
+
 /*********************
     buttons
  *********************/
@@ -485,33 +525,6 @@ a:focus {
   text-align: center;
 }
 
-.margin_2 {
-  margin-bottom: 1.5rem;
-}
-@media all and (min-width: 992px) {
-  .margin_2 {
-    margin-bottom: 2rem;
-  }
-}
-
-.margin_3 {
-  margin-bottom: 2rem;
-}
-@media all and (min-width: 992px) {
-  .margin_3 {
-    margin-bottom: 3rem;
-  }
-}
-
-.margin_4 {
-  margin-bottom: 3rem;
-}
-@media all and (min-width: 992px) {
-  .margin_4 {
-    margin-bottom: 4rem;
-  }
-}
-
 /********************
  Size image-Main
 *********************/
@@ -548,6 +561,7 @@ h6 {
   color: #212735;
   font-weight: 700;
   margin-top: 0.3rem;
+  line-height: 1.3;
 }
 
 section h3 {
@@ -681,56 +695,48 @@ h6 {
 section,
 header,
 footer,
-.pricing_card,
 .card_container {
   position: relative;
 }
 section.darkgray,
 header.darkgray,
 footer.darkgray,
-.pricing_card.darkgray,
 .card_container.darkgray {
   background: #131720;
 }
 section.darkgreen,
 header.darkgreen,
 footer.darkgreen,
-.pricing_card.darkgreen,
 .card_container.darkgreen {
   background: #004d38;
 }
 section.blue,
 header.blue,
 footer.blue,
-.pricing_card.blue,
 .card_container.blue {
   background: #1368e7;
 }
 section.lightgrey,
 header.lightgrey,
 footer.lightgrey,
-.pricing_card.lightgrey,
 .card_container.lightgrey {
   background: #f9f9f9;
 }
 section.white,
 header.white,
 footer.white,
-.pricing_card.white,
 .card_container.white {
   background: #fff;
 }
 section.transparent,
 header.transparent,
 footer.transparent,
-.pricing_card.transparent,
 .card_container.transparent {
   background: transparent;
 }
 section.lighturqoise,
 header.lighturqoise,
 footer.lighturqoise,
-.pricing_card.lighturqoise,
 .card_container.lighturqoise {
   background: #e6f4f1;
 }
@@ -748,14 +754,7 @@ section.darkgray h4,
 section.darkgray h5,
 section.darkgray h6,
 section.darkgray li,
-section.darkgray p, section.blue h1,
-section.blue h2,
-section.blue h3,
-section.blue h4,
-section.blue h5,
-section.blue h6,
-section.blue li,
-section.blue p,
+section.darkgray p,
 header.darkgreen h1,
 header.darkgreen h2,
 header.darkgreen h3,
@@ -772,14 +771,6 @@ header.darkgray h5,
 header.darkgray h6,
 header.darkgray li,
 header.darkgray p,
-header.blue h1,
-header.blue h2,
-header.blue h3,
-header.blue h4,
-header.blue h5,
-header.blue h6,
-header.blue li,
-header.blue p,
 footer.darkgreen h1,
 footer.darkgreen h2,
 footer.darkgreen h3,
@@ -796,38 +787,6 @@ footer.darkgray h5,
 footer.darkgray h6,
 footer.darkgray li,
 footer.darkgray p,
-footer.blue h1,
-footer.blue h2,
-footer.blue h3,
-footer.blue h4,
-footer.blue h5,
-footer.blue h6,
-footer.blue li,
-footer.blue p,
-.pricing_card.darkgreen h1,
-.pricing_card.darkgreen h2,
-.pricing_card.darkgreen h3,
-.pricing_card.darkgreen h4,
-.pricing_card.darkgreen h5,
-.pricing_card.darkgreen h6,
-.pricing_card.darkgreen li,
-.pricing_card.darkgreen p,
-.pricing_card.darkgray h1,
-.pricing_card.darkgray h2,
-.pricing_card.darkgray h3,
-.pricing_card.darkgray h4,
-.pricing_card.darkgray h5,
-.pricing_card.darkgray h6,
-.pricing_card.darkgray li,
-.pricing_card.darkgray p,
-.pricing_card.blue h1,
-.pricing_card.blue h2,
-.pricing_card.blue h3,
-.pricing_card.blue h4,
-.pricing_card.blue h5,
-.pricing_card.blue h6,
-.pricing_card.blue li,
-.pricing_card.blue p,
 .card_container.darkgreen h1,
 .card_container.darkgreen h2,
 .card_container.darkgreen h3,
@@ -843,60 +802,118 @@ footer.blue p,
 .card_container.darkgray h5,
 .card_container.darkgray h6,
 .card_container.darkgray li,
-.card_container.darkgray p,
-.card_container.blue h1,
-.card_container.blue h2,
-.card_container.blue h3,
-.card_container.blue h4,
-.card_container.blue h5,
-.card_container.blue h6,
-.card_container.blue li,
-.card_container.blue p {
+.card_container.darkgray p {
   color: #fff;
+}
+section.darkgreen .underscore_link, section.darkgray .underscore_link,
+header.darkgreen .underscore_link,
+header.darkgray .underscore_link,
+footer.darkgreen .underscore_link,
+footer.darkgray .underscore_link,
+.card_container.darkgreen .underscore_link,
+.card_container.darkgray .underscore_link {
+  color: #daff7d;
+}
+section.darkgreen .underscore_link:before, section.darkgray .underscore_link:before,
+header.darkgreen .underscore_link:before,
+header.darkgray .underscore_link:before,
+footer.darkgreen .underscore_link:before,
+footer.darkgray .underscore_link:before,
+.card_container.darkgreen .underscore_link:before,
+.card_container.darkgray .underscore_link:before {
+  background: #daff7d;
 }
 section.white h1,
 section.white h2,
 section.white h3,
 section.white h4,
 section.white h5,
-section.white h6,
+section.white h6, section.lighturqoise h1,
+section.lighturqoise h2,
+section.lighturqoise h3,
+section.lighturqoise h4,
+section.lighturqoise h5,
+section.lighturqoise h6,
 header.white h1,
 header.white h2,
 header.white h3,
 header.white h4,
 header.white h5,
 header.white h6,
+header.lighturqoise h1,
+header.lighturqoise h2,
+header.lighturqoise h3,
+header.lighturqoise h4,
+header.lighturqoise h5,
+header.lighturqoise h6,
 footer.white h1,
 footer.white h2,
 footer.white h3,
 footer.white h4,
 footer.white h5,
 footer.white h6,
-.pricing_card.white h1,
-.pricing_card.white h2,
-.pricing_card.white h3,
-.pricing_card.white h4,
-.pricing_card.white h5,
-.pricing_card.white h6,
+footer.lighturqoise h1,
+footer.lighturqoise h2,
+footer.lighturqoise h3,
+footer.lighturqoise h4,
+footer.lighturqoise h5,
+footer.lighturqoise h6,
 .card_container.white h1,
 .card_container.white h2,
 .card_container.white h3,
 .card_container.white h4,
 .card_container.white h5,
-.card_container.white h6 {
+.card_container.white h6,
+.card_container.lighturqoise h1,
+.card_container.lighturqoise h2,
+.card_container.lighturqoise h3,
+.card_container.lighturqoise h4,
+.card_container.lighturqoise h5,
+.card_container.lighturqoise h6 {
   color: #212735;
 }
 section.white li,
 section.white p,
+section.white a, section.lighturqoise li,
+section.lighturqoise p,
+section.lighturqoise a,
 header.white li,
 header.white p,
+header.white a,
+header.lighturqoise li,
+header.lighturqoise p,
+header.lighturqoise a,
 footer.white li,
 footer.white p,
-.pricing_card.white li,
-.pricing_card.white p,
+footer.white a,
+footer.lighturqoise li,
+footer.lighturqoise p,
+footer.lighturqoise a,
 .card_container.white li,
-.card_container.white p {
+.card_container.white p,
+.card_container.white a,
+.card_container.lighturqoise li,
+.card_container.lighturqoise p,
+.card_container.lighturqoise a {
   color: #212735;
+}
+section.white .underscore_link, section.lighturqoise .underscore_link,
+header.white .underscore_link,
+header.lighturqoise .underscore_link,
+footer.white .underscore_link,
+footer.lighturqoise .underscore_link,
+.card_container.white .underscore_link,
+.card_container.lighturqoise .underscore_link {
+  color: #004d38;
+}
+section.white .underscore_link:before, section.lighturqoise .underscore_link:before,
+header.white .underscore_link:before,
+header.lighturqoise .underscore_link:before,
+footer.white .underscore_link:before,
+footer.lighturqoise .underscore_link:before,
+.card_container.white .underscore_link:before,
+.card_container.lighturqoise .underscore_link:before {
+  background: #004d38;
 }
 
 section.overlay-dark::before,
@@ -943,12 +960,12 @@ header.overlay-none::before {
 }
 
 /**************************************
-main nav - default colors for white & lightgrey bg
+main nav - default colors for white & lightgrey bg  ????
 ***************************************/
 #nav-wrap {
   width: 100%;
   top: 0px;
-  height: 100px;
+  height: 80px;
   background: transparent;
   padding: 0rem calc(1.5rem - 15px);
 }
@@ -962,6 +979,7 @@ main nav - default colors for white & lightgrey bg
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid #e6e6e6;
     padding: 0rem calc(3rem - 15px);
   }
 }
@@ -972,16 +990,16 @@ main nav - default colors for white & lightgrey bg
 }
 @media all and (min-width: 1200px) {
   #nav-wrap {
-    padding: 1rem calc(3.75rem - 15px);
+    padding: 0.8rem calc(3.75rem - 15px);
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 0;
   }
 }
 
 .main_menu {
   position: relative;
   background: transparent;
-  border-bottom: 1px solid #e6e6e6;
   padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
@@ -1331,9 +1349,9 @@ main nav - default colors for white & lightgrey bg
   transform: translateX(0);
 }
 
-/************************
-   header*
-*************************/
+/*********************
+     header
+*********************/
 .header_main {
   min-height: 400px;
   margin-bottom: 3rem;
@@ -1360,10 +1378,10 @@ main nav - default colors for white & lightgrey bg
     padding-bottom: 0;
   }
 }
-.header_main .btn_link.green {
+.header_main .btn_link.green, .header_main .btn_link.outline_color_white {
   color: #fff;
 }
-.header_main .btn_link.green:hover {
+.header_main .btn_link.green:hover, .header_main .btn_link.outline_color_white:hover {
   color: #00a87b;
 }
 .header_main .header_items_section {
@@ -1489,163 +1507,8 @@ main nav - default colors for white & lightgrey bg
   background: inherit;
 }
 
-/*********************
-    pricing
- *********************/
-.pricing_section .pricing_card {
-  border-radius: 24px;
-  height: 480px;
-}
-@media all and (min-width: 576px) {
-  .pricing_section .pricing_card {
-    height: 500px;
-  }
-}
-@media all and (min-width: 1200px) {
-  .pricing_section .pricing_card {
-    height: 560px;
-  }
-}
-.pricing_section .pricing_card_body {
-  padding: 0 1rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.pricing_section .pricing_card_header {
-  border-bottom: 1px solid #b8e0d7;
-}
-.pricing_section ul.feat_list {
-  padding-top: 0.5rem;
-}
-.pricing_section ul.feat_list li.list_item {
-  margin-bottom: 0.1rem;
-}
-@media all and (min-width: 1200px) {
-  .pricing_section ul.feat_list li.list_item {
-    margin-bottom: 0.5rem;
-  }
-}
-.pricing_section .price {
-  padding: 0.5rem 0;
-}
-.pricing_section .price .number {
-  font-weight: 500;
-  font-size: 1.9rem;
-}
-.pricing_section .price .number span {
-  font-size: 0.8rem;
-}
-.pricing_section .btn_link {
-  width: 12rem;
-  text-align: center;
-}
-
-/*********************
-feature list  (pricing page)
-*********************/
-.feature_list_section .feature_list_item {
-  display: flex;
-  padding-bottom: 2rem;
-  padding: 0 1rem 2rem 0;
-}
-.feature_list_section .features_icon {
-  padding-right: 0.8rem;
-}
-.feature_list_section .features_icon i {
-  color: #00a87b;
-  font-size: 1.6rem;
-}
-
-/*********************
-   faq accordion
-*********************/
-.faq_accordion_section .accordion_btn {
-  background: #e6f4f1;
-  border: none;
-  padding: 1rem;
-  margin: 0.5rem auto;
-  border-radius: 24px;
-  width: 100%;
-  text-align: left;
-  color: #212735;
-}
-.faq_accordion_section .accordion_btn:focus {
-  filter: none;
-}
-.faq_accordion_section .accordion_btn .heading {
-  cursor: pointer;
-  transition: all 0.5s ease;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-@media all and (min-width: 768px) {
-  .faq_accordion_section .accordion_btn .heading {
-    padding: 0.5rem 1rem;
-  }
-}
-.faq_accordion_section .accordion_btn .heading h3 {
-  margin-bottom: 0;
-}
-.faq_accordion_section .accordion_btn .heading .fa-angle-down {
-  transition: all 0.3s linear;
-  font-size: 1.2rem;
-  margin: 0 0.1rem 0 0.5rem;
-  height: 1.1rem;
-  padding: 2px;
-  color: #212735;
-}
-@media all and (min-width: 768px) {
-  .faq_accordion_section .accordion_btn .heading .fa-angle-down {
-    margin: 0 1rem;
-  }
-}
-.faq_accordion_section .accordion_btn .heading .fa-angle-down:hover {
-  color: #00a2ff;
-}
-.faq_accordion_section .accordion_btn .accordion_content {
-  margin-bottom: 0;
-  padding: 0rem 1rem 0 1rem;
-  max-height: 0;
-  overflow-y: hidden;
-  transition: all 0.4s ease-out;
-  opacity: 0;
-  line-height: 1.5;
-}
-.faq_accordion_section .accordion_btn.open .heading {
-  margin-bottom: 1rem;
-}
-.faq_accordion_section .accordion_btn.open .fa-angle-down {
-  transform: rotate(180deg);
-}
-.faq_accordion_section .accordion_btn.open .accordion_content {
-  opacity: 1;
-  max-height: 800px;
-  padding: 0rem 1rem 2rem 1rem;
-}
-
-/*********************
-   info banner
-*********************/
-.info_banner {
-  min-height: 310px;
-}
-.info_banner p {
-  line-height: 1.8;
-}
-.info_banner .link_wrapper {
-  padding: 0.5rem 0;
-}
-.info_banner .link_wrapper a {
-  display: inline-block;
-}
-
 /*************************
-two_columns_img_or_text & 
-front_text_image_field
+text_or_image_field
 **************************/
 .two_columns_section {
   min-height: 300px;
@@ -1723,6 +1586,7 @@ front_text_image_field
   border-radius: 24px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   height: auto;
+  width: 100%;
 }
 .two_columns_section .part .alt_caption {
   text-align: center;
@@ -1761,50 +1625,41 @@ front_text_image_field
     width: 30%;
   }
 }
-.two_columns_section.presentation .part.image img {
-  max-width: 120px;
-  margin-bottom: 2rem;
+
+/*********************
+feature list  
+*********************/
+.feature_list_section .feature_list_item {
+  display: flex;
+  padding-bottom: 2rem;
+  padding: 0 1rem 2rem 0;
 }
-@media all and (min-width: 768px) {
-  .two_columns_section.presentation .part.image img {
-    max-width: 180px;
-    margin-bottom: 0;
-  }
+.feature_list_section .features_icon {
+  padding-right: 0.8rem;
+}
+.feature_list_section .features_icon i {
+  color: #00a87b;
+  font-size: 1.6rem;
 }
 
-/*********************************
-  feature blocks
-  - blocks in different colors or bg image
-***********************************/
-.feature_blocks {
-  background: #131720;
-  color: #fff;
+/*********************
+   info banner
+*********************/
+.info_banner {
+  min-height: 310px;
 }
-.feature_blocks .feature_blocks_main_heading {
-  margin-bottom: 4rem;
+.info_banner p {
+  line-height: 1.8;
 }
-.feature_blocks .features_presentation {
-  margin: 1rem 0 2rem 0;
+.info_banner .link_wrapper {
+  padding: 0.5rem 0;
 }
-.feature_blocks .btn_link {
-  margin: 0 0 2rem 0;
-}
-.feature_blocks .feature_block {
-  position: relative;
-  margin-bottom: 3rem;
-  height: auto;
-}
-@media all and (min-width: 1200px) {
-  .feature_blocks .feature_block {
-    padding: 0 0 0 1.5rem;
-  }
-}
-.feature_blocks .feature_text {
-  white-space: normal;
+.info_banner .link_wrapper a {
+  display: inline-block;
 }
 
 /**********************
-  integrations
+  integrations field
 ***********************/
 .integrations_section .text_section {
   padding-bottom: 1rem;
@@ -1827,8 +1682,38 @@ front_text_image_field
 }
 
 /****************************************
-  Card Layout for Blog, Videos, Pricing and cards
+  Card Layout for Blog and cards
 *****************************************/
+.cards_template_content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 2rem;
+}
+.cards_template_content .card_container {
+  margin: 0;
+  flex-grow: 1;
+  flex-basis: 200px;
+  max-width: 100%;
+}
+@media all and (min-width: 576px) {
+  .cards_template_content .card_container {
+    flex-basis: 250px;
+    max-width: 280px;
+  }
+}
+@media all and (min-width: 768px) {
+  .cards_template_content .card_container {
+    flex-basis: 270px;
+    max-width: 300px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .cards_template_content .card_container {
+    flex-basis: 280px;
+    max-width: 330px;
+  }
+}
+
 .card_container {
   position: relative;
   background: #fff;
@@ -2041,257 +1926,76 @@ front_text_image_field
   color: #fff;
 }
 
-/*********************
-        Blog
- *********************/
-.blog_flow .blog_post_meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0.5rem 0 0 0;
-}
-.blog_flow .blog_post_meta p {
-  font-size: 0.9rem;
-  margin: 0;
-  color: #66758d;
-  margin-bottom: 0.5rem;
-}
-.blog_flow .wpcf7 {
-  max-width: 100%;
-}
-.blog_flow .wpcf7 label {
-  max-width: 100%;
-}
-.blog_flow .wpcf7 label input {
-  max-width: 100%;
-}
-
-.paginate_links {
-  text-align: center;
-}
-.paginate_links span,
-.paginate_links a,
-.paginate_links button {
-  display: inline-block;
-  margin-right: 0.2rem;
-  line-height: 1.2;
-  border-radius: 10px;
-  border: 1px solid #a6b0bf;
-}
-.paginate_links .page-numbers {
-  padding: 0.4rem 0.6rem;
-}
-.paginate_links .page-numbers.current {
-  color: #212735;
-}
-.paginate_links .prev,
-.paginate_links .next {
-  border: none;
-  padding: 0;
-}
-.paginate_links button,
-.paginate_links .btn {
-  border-color: #a6b0bf;
-  background: transparent;
-  color: #212735;
-  padding: 0.4rem 0.6rem !important;
-}
-
-/********************
-latest_updates_section
-*********************/
-.latest_updates_section .updates_tabs {
-  display: flex;
-}
-@media all and (min-width: 768px) {
-  .latest_updates_section .updates_tabs {
-    justify-content: center;
-  }
-}
-@media all and (max-width: 480px) {
-  .latest_updates_section .updates_tabs .btn_link {
-    padding: 8px 10px;
-  }
-}
-.latest_updates_section .updates_btn {
-  font-size: 13px;
-  margin-right: 0.4rem;
-  text-transform: capitalize;
-}
-@media all and (min-width: 576px) {
-  .latest_updates_section .updates_btn {
-    margin-right: 0.6rem;
-  }
-}
-@media all and (min-width: 768px) {
-  .latest_updates_section .updates_btn {
-    font-size: 15px;
-    margin-right: 0.8rem;
-  }
-}
-.latest_updates_section .updates_btn.active {
-  color: #fff;
-  background: #131720;
-}
-
-.updates_tab_content,
-.cards_template_content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem 2rem;
-}
-.updates_tab_content .card_container,
-.cards_template_content .card_container {
-  margin: 0;
-  flex-grow: 1;
-  flex-basis: 200px;
-  max-width: 100%;
-}
-@media all and (min-width: 576px) {
-  .updates_tab_content .card_container,
-.cards_template_content .card_container {
-    flex-basis: 250px;
-    max-width: 280px;
-  }
-}
-@media all and (min-width: 768px) {
-  .updates_tab_content .card_container,
-.cards_template_content .card_container {
-    flex-basis: 270px;
-    max-width: 300px;
-  }
-}
-@media all and (min-width: 1200px) {
-  .updates_tab_content .card_container,
-.cards_template_content .card_container {
-    flex-basis: 280px;
-    max-width: 330px;
-  }
-}
-
-/*******************************************
-    Filter menu - blog, videos, product
- ******************************************/
-.blog_sidebar,
-.video_filter,
-.page_aside {
-  background: #e6f4f1;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-@media all and (min-width: 768px) {
-  .blog_sidebar,
-.video_filter,
-.page_aside {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-.blog_sidebar .filter_nav h3,
-.video_filter .filter_nav h3,
-.page_aside .filter_nav h3 {
-  display: none;
-}
-.blog_sidebar ul,
-.video_filter ul,
-.page_aside ul {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  /*Uncategorized not show*/
-}
-@media all and (min-width: 576px) {
-  .blog_sidebar ul,
-.video_filter ul,
-.page_aside ul {
-    flex-direction: row;
-  }
-}
-.blog_sidebar ul li,
-.video_filter ul li,
-.page_aside ul li {
-  position: relative;
-  font-size: 0.9rem;
-  border-bottom: 1px solid #b8e0d7;
-}
-@media all and (min-width: 576px) {
-  .blog_sidebar ul li,
-.video_filter ul li,
-.page_aside ul li {
-    margin-right: 2rem;
-    border: none;
-  }
-}
-.blog_sidebar ul li::after,
-.video_filter ul li::after,
-.page_aside ul li::after {
-  opacity: 0;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  left: 0;
-  bottom: 0;
-  background: #00a2ff;
-  transition: all ease-out 300ms;
-}
-.blog_sidebar ul li:hover::after,
-.video_filter ul li:hover::after,
-.page_aside ul li:hover::after {
-  opacity: 1;
-}
-.blog_sidebar ul li a,
-.video_filter ul li a,
-.page_aside ul li a {
-  padding: 0.5rem 0.2rem 0.5rem 0.2rem;
-  text-decoration: none;
-  display: block;
-  white-space: nowrap;
-  font-weight: 500;
-  color: #212735;
-}
-@media all and (min-width: 576px) {
-  .blog_sidebar ul li a,
-.video_filter ul li a,
-.page_aside ul li a {
-    padding: 1rem 0.2rem 0.8rem 0.2rem;
-  }
-}
-.blog_sidebar ul li a:hover,
-.video_filter ul li a:hover,
-.page_aside ul li a:hover {
-  opacity: 1;
-}
-.blog_sidebar ul li.cat-item-1,
-.video_filter ul li.cat-item-1,
-.page_aside ul li.cat-item-1 {
-  display: none;
-}
-.blog_sidebar ul li.current-cat a,
-.video_filter ul li.current-cat a,
-.page_aside ul li.current-cat a {
-  border-bottom: 3px solid #00a2ff;
-}
-.blog_sidebar ul .most-recent.current-misse a,
-.video_filter ul .most-recent.current-misse a,
-.page_aside ul .most-recent.current-misse a {
-  border-bottom: 3px solid #00a2ff;
-}
-
-.page_aside .current_page_item::after,
-.page_aside .parent_active::after {
-  opacity: 1;
-}
-
 /**********************************
-text layout for Pages Content block
+text content field
 ***********************************/
 .text_section_pages .text_content img,
 .text_section_pages .text_content iframe {
   display: block;
   margin: 2.5rem auto;
   border-radius: 24px;
+}
+
+/*********************
+  image slider
+*********************/
+.image_slider .category {
+  display: block;
+  margin: 1rem 0;
+  color: #00a87b;
+  letter-spacing: 1px;
+}
+.image_slider .image_slider_wrapper {
+  min-height: 400px;
+  display: flex;
+  justify-content: flex-start;
+}
+@media all and (min-width: 1200px) {
+  .image_slider .image_slider_wrapper {
+    justify-content: flex-end;
+    min-height: 500px;
+  }
+}
+.image_slider .image_slider_wrapper.left {
+  justify-content: flex-start;
+}
+.image_slider .big_images {
+  position: relative;
+  width: 84%;
+}
+.image_slider .big_img_item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 24px;
+  transition: opacity 0.2s ease-in;
+  height: auto;
+  opacity: 0.5;
+  z-index: 1;
+}
+.image_slider .big_img_item.active {
+  opacity: 1;
+  z-index: 2;
+}
+.image_slider .thumbnails {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.2s ease-in;
+}
+.image_slider .thumbnail_item {
+  cursor: pointer;
+  margin: 5px 0 0 5px;
+  opacity: 1;
+}
+@media all and (min-width: 1200px) {
+  .image_slider .thumbnail_item {
+    margin: 10px 0 0 10px;
+  }
+}
+.image_slider .thumbnail_item.active {
+  opacity: 0.5;
 }
 
 /********************
@@ -2323,6 +2027,9 @@ text layout for Pages Content block
 /*********************
    footer and signup
 *********************/
+.signup_section {
+  background: #daff7d;
+}
 .signup_section .btn_container {
   justify-content: center;
 }
@@ -2335,6 +2042,9 @@ text layout for Pages Content block
 }
 .signup_section .btn_container .btn_link.green:hover {
   color: #00a87b;
+}
+.signup_section .angle {
+  font-size: 2.5rem;
 }
 
 .footer_main {
@@ -2369,9 +2079,6 @@ text layout for Pages Content block
   font-size: 1.2rem;
   margin-right: 0.5rem;
 }
-.footer_main .customer_contact .underscore_link:before {
-  background: #daff7d;
-}
 .footer_main .customer_contact p {
   margin: 0;
 }
@@ -2379,12 +2086,12 @@ text layout for Pages Content block
   margin: 0.8rem 0;
 }
 .footer_main .logo_footer img {
-  width: 120px;
+  width: 110px;
   margin-bottom: 1rem;
 }
 @media all and (min-width: 992px) {
   .footer_main .logo_footer img {
-    width: 140px;
+    width: 120px;
   }
 }
 .footer_main .social_icons {
@@ -2569,5 +2276,12 @@ contact_form_block
 #moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content p {
   font-weight: 400 !important;
 }
+
+/*********************
+        Blog
+ *********************/
+/*******************************************
+    Filter menu - blog, videos, product
+ ******************************************/
 
 /*# sourceMappingURL=custom.css.map */

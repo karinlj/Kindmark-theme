@@ -30,7 +30,7 @@ if (is_home() || is_archive()) {
                 <section class="signup">
                     <ul>
                         <li>
-                            <a class="btn_link green" href="<?php echo esc_url(home_url('#footer')); ?>"
+                            <a class="btn_link outline_color_white" href="<?php echo esc_url(home_url('#footer')); ?>"
                                 aria-label="Kontakt">
                                 Kontakta Oss
                             </a>

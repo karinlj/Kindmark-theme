@@ -1,10 +1,9 @@
 <?php
 
 /**
- * Created by Karin.
- * Layout 'front_text_image_field' in flex content 'Front Page block'
+ * Layout 'front_text_image_field'
  */
-if (get_row_layout() == 'front_text_image_field') {
+if (get_row_layout() == 'text_or_image_field') {
 
     $color = get_sub_field('background_color');
     $column_class = 'big_image';
@@ -16,7 +15,7 @@ if (get_row_layout() == 'front_text_image_field') {
     $box_shadow_on_image = get_sub_field('box_shadow_on_image');
 
     if ($narrow_field == 'true') {
-        $padding_class = 'section_spacing_top_small';
+        $padding_class = 'section_spacing_top_mini';
     }
     if ($big_or_small_image == 'small_image') {
         $column_class = 'small_image';
@@ -28,8 +27,6 @@ if (get_row_layout() == 'front_text_image_field') {
 ?>
     <section class="two_columns_section <?php echo $column_class; ?> <?php echo $color; ?> <?php echo $padding_class; ?>">
         <div class="container">
-            <?php
-            $color = get_sub_field('background_color'); ?>
             <section class="column_row ">
                 <!-- loopa flex content -->
                 <?php if (have_rows('two_columns')) {

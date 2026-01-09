@@ -1,9 +1,10 @@
 <?php
-//wysiwyg front page
+//text content field
 if (get_row_layout() == 'text_content') { ?>
 
     <?php
     $wider_field = get_sub_field('wider_field');
+        $color = get_sub_field('background_color');
     $text = get_sub_field('text');
     $column_class = 'col-12 col-lg-10';
 
@@ -11,7 +12,7 @@ if (get_row_layout() == 'text_content') { ?>
         $column_class = 'col-12';
     }
     ?>
-    <section class="text_section_pages section_spacing_top_small">
+    <section class="text_section_pages <?php echo $color; ?> section_spacing_top_small">
         <div class="container">
             <div class="row">
                 <div class="<?php echo $column_class; ?>">
