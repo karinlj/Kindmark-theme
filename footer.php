@@ -36,7 +36,7 @@
         <div class="row align-items-start justify-content-between">
             <div class="col-12 col-md-6 col-xl-5">
                 <div class="logo_footer">
-                    <a href="<?php echo home_url() ?>" class="logo" aria-label="Home page">
+                    <a href="<?php echo home_url() ?>" aria-label="Home page">
                         <!-- <h2 class="colored_light_green_part">Sample site logo</h2> -->
                         <img
                             src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_01.png"

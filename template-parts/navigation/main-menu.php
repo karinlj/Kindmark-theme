@@ -18,7 +18,7 @@ if (is_home() || is_archive()) {
                 <img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_01.png"
                     width="100" height="auto" alt="Kindmarks logo" />
-                <span>Sample site</span>
+                <!-- <span class="sample_site">Sample site</span> -->
             </a>
 
             <div class="nav_links">

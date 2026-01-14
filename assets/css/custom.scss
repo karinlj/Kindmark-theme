@@ -141,7 +141,7 @@ img {
     padding: 3rem calc(3rem - 15px);
   }
   @media all and (min-width: $xl-min) {
-    padding: 4rem calc(3.75rem - 15px);
+    padding: 4.5rem calc(3.75rem - 15px);
   }
 }
 .section_spacing_top_mini {
@@ -178,6 +178,12 @@ img {
   margin-bottom: 4rem;
   @media all and (min-width: $lg-min) {
     margin-bottom: 5rem;
+  }
+}
+.margin_top_5 {
+  margin-top: 4rem;
+  @media all and (min-width: $lg-min) {
+    margin-top: 5rem;
   }
 }
 .reversed {
@@ -382,7 +388,10 @@ a {
 .underscore_link {
   color: #fff;
   font-weight: 500;
-  font-size: 1.1rem;
+    font-size: 1.2rem;
+    @media all and (min-width: $xl-min) {
+      font-size: 1.3rem;
+    }
   &:before {
     opacity: 0.6;
     position: absolute;
@@ -503,8 +512,8 @@ section {
   }
 }
 p {
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1.1rem;
+  line-height: 1.8;
   &.medium_text {
     font-size: 1.2rem;
     @media all and (min-width: $xl-min) {
@@ -626,6 +635,7 @@ footer,
     h5,
     h6,
     li,
+    span,
     p {
       color: #fff;
     }
@@ -648,6 +658,7 @@ footer,
       color: $headingcolor;
     }
     li,
+    span,
     p,
     a {
       color: $themecolor;
@@ -836,7 +847,7 @@ main nav - default colors for white & lightgrey bg  ????
           padding: 8px 18px;
           background-color: transparent;
           border-radius: 0;
-                border-radius: $btnBorder_radius;
+          border-radius: $btnBorder_radius;
           // font-size: 1.05rem;
           margin: 0 1rem;
 
@@ -848,47 +859,6 @@ main nav - default colors for white & lightgrey bg  ????
         }
       }
     }
-    // ul {
-    //   position: absolute;
-    //   z-index: 10;
-    //   top: 45px;
-    //   background-color: #fff;
-    //   width: 230px;
-    //   padding: 2rem 0;
-    //   display: none;
-    //   box-shadow: $themeBox_shadow;
-    //   li {
-    //     width: 100%;
-    //     a {
-    //       padding: 0.5rem 1.5rem;
-    //       margin: 0;
-    //       text-transform: none;
-    //       background-color: transparent;
-    //       border-radius: 0;
-    //       color: #16181d;
-    //       font-weight: 500;
-    //       font-size: 0.8rem;
-    //       &:hover {
-    //         border-bottom: 1px solid transparent;
-    //       }
-    //     }
-    //     &:hover {
-    //       a {
-    //         background: #f4f0f4;
-    //       }
-    //     }
-    //   }
-    //   li.current-menu-item {
-    //     > a {
-    //       border-bottom: 1px solid transparent;
-    //     }
-    //   }
-    //   /*toggle open*/
-    //   &.sub-menu-open {
-    //     display: flex;
-    //     flex-direction: column;
-    //   }
-    // }
   }
   // menu btn
   > .menu_toggle_btn {
@@ -972,18 +942,12 @@ main nav - default colors for white & lightgrey bg  ????
   &:visited {
     color: #fff;
   }
-  span {
-    display: none;
-    font-weight: 600;
-    font-size: 2.4rem;
-    white-space: nowrap;
-    @media (min-width: $sm-min) {
-      font-size: 2.1rem;
-    }
-    @media (min-width: $lg-min) {
-      font-size: 2.2rem;
-    }
-  }
+  // span.sample_site {
+  //   display: none;
+  //   font-weight: 600;
+  //   font-size: 2.4rem;
+  //   white-space: nowrap;
+  // }
   img {
     margin-top: 80px;
     width: 140px;
@@ -996,7 +960,7 @@ main nav - default colors for white & lightgrey bg  ????
     @media all and (min-width: $lg-min) {
       padding-top: 0;
       padding-right: 25px;
-      width: 180px;
+      width: 170px;
     }
   }
 }
@@ -1039,9 +1003,6 @@ main nav - default colors for white & lightgrey bg  ????
   @media all and (min-width: $lg-min) {
     display: none;
   }
-  // .logo {
-  //   padding: 0 10px;
-  // }
   .nav_links {
     margin-top: 8rem;
     margin-left: 1rem;
@@ -1847,26 +1808,26 @@ text content field
    footer and signup
 *********************/
 //signup for pages
-.signup_section {
-  background: $themecolorLightGreen;
-  .btn_container {
-    justify-content: center;
-    .btn_link {
-      box-shadow: $themeBox_shadow;
-      &.green {
-        box-shadow: $themeBox_shadow;
-        color: #fff;
-        &:hover {
-          color: $themecolorGreen;
-        }
-      }
-    }
-  }
+// .signup_section {
+//   background: $themecolorLightGreen;
+//   .btn_container {
+//     justify-content: center;
+//     .btn_link {
+//       box-shadow: $themeBox_shadow;
+//       &.green {
+//         box-shadow: $themeBox_shadow;
+//         color: #fff;
+//         &:hover {
+//           color: $themecolorGreen;
+//         }
+//       }
+//     }
+//   }
 
-  .angle {
-    font-size: 2.5rem;
-  }
-}
+//   .angle {
+//     font-size: 2.5rem;
+//   }
+// }
 .footer_main {
   background: $themecolorGreenDark;
   display: flex;
@@ -1911,6 +1872,15 @@ text content field
         width: 120px;
       }
     }
+    // img {
+    //   width: 140px;
+    //   @media all and (min-width: $lg-min) {
+    //     width: 170px;
+    //   }
+    // }
+  }
+  .underscore_link {
+    font-size: 1.1rem;
   }
   .social_icons {
     padding: 0.5rem 0 2rem 0;

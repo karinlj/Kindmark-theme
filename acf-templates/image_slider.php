@@ -8,9 +8,6 @@
         $row_class = '';
         $align_class = 'right';
         //Loopa 
-        if (have_rows('image_slider')) {
-            while (have_rows('image_slider')) {
-                the_row();
 
                 $category = get_sub_field('category');
                 $heading = get_sub_field('heading');
@@ -22,7 +19,7 @@
                     $align_class = 'left';
                 }
         ?>
-                <div class="row <?php echo $row_class; ?> margin_5">
+                <div class="row <?php echo $row_class; ?>">
 
                     <div class="col-lg-4">
                         <?php if ($category) { ?>
@@ -75,7 +72,6 @@
                         </div>
                     </div>
                 </div>
-        <?php   }
-        } ?>
+ 
     </div>
 </section>

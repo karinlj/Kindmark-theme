@@ -133,7 +133,7 @@ img {
 }
 @media all and (min-width: 1200px) {
   .section_spacing_top_small {
-    padding: 4rem calc(3.75rem - 15px);
+    padding: 4.5rem calc(3.75rem - 15px);
   }
 }
 
@@ -189,6 +189,15 @@ img {
 @media all and (min-width: 992px) {
   .margin_5 {
     margin-bottom: 5rem;
+  }
+}
+
+.margin_top_5 {
+  margin-top: 4rem;
+}
+@media all and (min-width: 992px) {
+  .margin_top_5 {
+    margin-top: 5rem;
   }
 }
 
@@ -444,7 +453,12 @@ a:focus {
 .underscore_link {
   color: #fff;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+}
+@media all and (min-width: 1200px) {
+  .underscore_link {
+    font-size: 1.3rem;
+  }
 }
 .underscore_link:before {
   opacity: 0.6;
@@ -572,8 +586,8 @@ section h4 {
 }
 
 p {
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 p.medium_text {
   font-size: 1.2rem;
@@ -747,6 +761,7 @@ section.darkgreen h4,
 section.darkgreen h5,
 section.darkgreen h6,
 section.darkgreen li,
+section.darkgreen span,
 section.darkgreen p, section.darkgray h1,
 section.darkgray h2,
 section.darkgray h3,
@@ -754,6 +769,7 @@ section.darkgray h4,
 section.darkgray h5,
 section.darkgray h6,
 section.darkgray li,
+section.darkgray span,
 section.darkgray p,
 header.darkgreen h1,
 header.darkgreen h2,
@@ -762,6 +778,7 @@ header.darkgreen h4,
 header.darkgreen h5,
 header.darkgreen h6,
 header.darkgreen li,
+header.darkgreen span,
 header.darkgreen p,
 header.darkgray h1,
 header.darkgray h2,
@@ -770,6 +787,7 @@ header.darkgray h4,
 header.darkgray h5,
 header.darkgray h6,
 header.darkgray li,
+header.darkgray span,
 header.darkgray p,
 footer.darkgreen h1,
 footer.darkgreen h2,
@@ -778,6 +796,7 @@ footer.darkgreen h4,
 footer.darkgreen h5,
 footer.darkgreen h6,
 footer.darkgreen li,
+footer.darkgreen span,
 footer.darkgreen p,
 footer.darkgray h1,
 footer.darkgray h2,
@@ -786,6 +805,7 @@ footer.darkgray h4,
 footer.darkgray h5,
 footer.darkgray h6,
 footer.darkgray li,
+footer.darkgray span,
 footer.darkgray p,
 .card_container.darkgreen h1,
 .card_container.darkgreen h2,
@@ -794,6 +814,7 @@ footer.darkgray p,
 .card_container.darkgreen h5,
 .card_container.darkgreen h6,
 .card_container.darkgreen li,
+.card_container.darkgreen span,
 .card_container.darkgreen p,
 .card_container.darkgray h1,
 .card_container.darkgray h2,
@@ -802,6 +823,7 @@ footer.darkgray p,
 .card_container.darkgray h5,
 .card_container.darkgray h6,
 .card_container.darkgray li,
+.card_container.darkgray span,
 .card_container.darkgray p {
   color: #fff;
 }
@@ -873,26 +895,34 @@ footer.lighturqoise h6,
   color: #212735;
 }
 section.white li,
+section.white span,
 section.white p,
 section.white a, section.lighturqoise li,
+section.lighturqoise span,
 section.lighturqoise p,
 section.lighturqoise a,
 header.white li,
+header.white span,
 header.white p,
 header.white a,
 header.lighturqoise li,
+header.lighturqoise span,
 header.lighturqoise p,
 header.lighturqoise a,
 footer.white li,
+footer.white span,
 footer.white p,
 footer.white a,
 footer.lighturqoise li,
+footer.lighturqoise span,
 footer.lighturqoise p,
 footer.lighturqoise a,
 .card_container.white li,
+.card_container.white span,
 .card_container.white p,
 .card_container.white a,
 .card_container.lighturqoise li,
+.card_container.lighturqoise span,
 .card_container.lighturqoise p,
 .card_container.lighturqoise a {
   color: #212735;
@@ -1200,22 +1230,6 @@ main nav - default colors for white & lightgrey bg  ????
 .logo_header:visited {
   color: #fff;
 }
-.logo_header span {
-  display: none;
-  font-weight: 600;
-  font-size: 2.4rem;
-  white-space: nowrap;
-}
-@media (min-width: 576px) {
-  .logo_header span {
-    font-size: 2.1rem;
-  }
-}
-@media (min-width: 992px) {
-  .logo_header span {
-    font-size: 2.2rem;
-  }
-}
 .logo_header img {
   margin-top: 80px;
   width: 140px;
@@ -1231,7 +1245,7 @@ main nav - default colors for white & lightgrey bg  ????
   .logo_header img {
     padding-top: 0;
     padding-right: 25px;
-    width: 180px;
+    width: 170px;
   }
 }
 
@@ -2058,26 +2072,6 @@ text content field
 /*********************
    footer and signup
 *********************/
-.signup_section {
-  background: #daff7d;
-}
-.signup_section .btn_container {
-  justify-content: center;
-}
-.signup_section .btn_container .btn_link {
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-}
-.signup_section .btn_container .btn_link.green {
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-  color: #fff;
-}
-.signup_section .btn_container .btn_link.green:hover {
-  color: #00a87b;
-}
-.signup_section .angle {
-  font-size: 2.5rem;
-}
-
 .footer_main {
   background: #004d38;
   display: flex;
@@ -2124,6 +2118,9 @@ text content field
   .footer_main .logo_footer img {
     width: 120px;
   }
+}
+.footer_main .underscore_link {
+  font-size: 1.1rem;
 }
 .footer_main .social_icons {
   padding: 0.5rem 0 2rem 0;
