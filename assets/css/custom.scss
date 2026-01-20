@@ -116,6 +116,7 @@ img {
 *********************/
 .container {
   max-width: 1170px;
+  width: 100%;
   position: relative;
   // max-width: 100%;
   // width: 1450px; //XXX
@@ -202,8 +203,10 @@ img {
   .btn_link {
     margin-top: 1rem;
     margin-right: 0.7rem;
+    margin-bottom: 1rem;
     @media all and (min-width: $lg-min) {
-      margin-right: 1rem;
+      margin-right: 1.5rem;
+       margin-bottom: 0;
     }
   }
 }
@@ -388,10 +391,10 @@ a {
 .underscore_link {
   color: #fff;
   font-weight: 500;
-    font-size: 1.2rem;
-    @media all and (min-width: $xl-min) {
-      font-size: 1.3rem;
-    }
+  font-size: 1.2rem;
+  @media all and (min-width: $xl-min) {
+    font-size: 1.3rem;
+  }
   &:before {
     opacity: 0.6;
     position: absolute;
@@ -488,7 +491,6 @@ input {
   font-weight: 400;
 }
 li {
-  // font-size: 0.9rem;
   line-height: 1.6;
 }
 h1,
@@ -513,7 +515,7 @@ section {
 }
 p {
   font-size: 1.1rem;
-  line-height: 1.8;
+  line-height: 1.7;
   &.medium_text {
     font-size: 1.2rem;
     @media all and (min-width: $xl-min) {
@@ -701,12 +703,15 @@ header {
 /**************************************
 main nav - default colors for white & lightgrey bg  ????
 ***************************************/
-#nav-wrap {
+#nav_wrap {
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   width: 100%;
   // position: absolute;
   top: 0px;
-  height: 80px;
-  background: transparent;
+  height: 100px;
+  border-bottom: 1px solid $themecolorLightest;
+  // background: transparent;
+  background: rgba(0, 0, 0, 0.225);
   padding: 0rem calc(1.5rem - 15px);
   @media all and (min-width: $sm-min) {
     padding: 0rem calc(2.25rem - 15px);
@@ -715,27 +720,25 @@ main nav - default colors for white & lightgrey bg  ????
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid $themeBorderColor;
+    // border-bottom: 1px solid $themeBorderColor;
     padding: 0rem calc(3rem - 15px);
   }
   @media all and (min-width: $md-min) {
-    padding: 1rem calc(3rem - 15px);
+    padding: 0rem calc(3rem - 15px);
+    height: 110px;
   }
   @media all and (min-width: $xl-min) {
-    padding: 0.8rem calc(3.75rem - 15px);
-    padding-left: 0;
-    padding-right: 0; //xxx
-    padding-bottom: 0;
+    padding: 0rem calc(3.75rem - 15px);
   }
 }
 .main_menu {
   position: relative;
   background: transparent;
-  padding-bottom: 0.5rem;
+  // padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 70px;
+  // justify-content: space-between;
+  height: 100px;
   a,
   a:visited,
   a:focus,
@@ -754,16 +757,17 @@ main nav - default colors for white & lightgrey bg  ????
       border-radius: $themeBorder_radius;
       //default: white bg
       a {
+        display: flex;
         text-transform: uppercase;
         margin: 0 1rem -1px 1rem;
         padding: 0.5rem 0.2rem;
         border-bottom: 1px solid transparent;
-        font-size: 14px;
+        font-size: 13px;
         color: $navcolor;
-        font-weight: 500;
+        font-weight: 600;
         letter-spacing: 0.6px;
         @media all and (min-width: $lg-min) {
-          font-size: 14px;
+          font-size: 12px;
         }
         &:hover {
           color: $navcolor;
@@ -778,7 +782,6 @@ main nav - default colors for white & lightgrey bg  ????
       }
     }
   }
-
   /*Wp:s klasser*/
   a:not([href]):not([tabindex]) {
     color: $navcolor;
@@ -796,19 +799,21 @@ main nav - default colors for white & lightgrey bg  ????
   li.menu-item-has-children {
     &.is_open {
       > a {
-        &::after {
-          content: "\f106";
-          font-family: "Font Awesome 6 Free";
-          font-weight: 900;
-          margin-left: 5px;
-        }
+        // &::after {
+        //   content: "\f106";
+        //   font-family: "Font Awesome 6 Free";
+        //   font-weight: 900;
+        //   margin-left: 5px;
+        //   cursor: pointer;
+        // }
       }
     }
     > a {
       color: $navcolor;
+      cursor: pointer;
       &:hover {
         color: $navcolor;
-        border-bottom: 1px solid transparent;
+        // border-bottom: 1px solid transparent;
       }
       &::after {
         content: "\f107";
@@ -824,18 +829,23 @@ main nav - default colors for white & lightgrey bg  ????
       background-color: #fff;
       width: 14rem;
       padding-bottom: 3px;
-      margin-top: 10px;
+      margin-top: -1px;
       box-shadow: $themeBox_shadow;
-      display: none;
+      // display: none;
+      opacity: 0;
       border-radius: $btnBorder_radius;
+      transition: all 0.3s ease-in;
+      display: flex;
+      flex-direction: column;
       &.sub-menu-open {
-        display: flex;
-        flex-direction: column;
+        opacity: 1;
+        // display: flex;
+        // flex-direction: column;
       }
       li {
         width: 100%;
         border-radius: 0;
-        border-bottom: 1px solid $themecolorGreenDarker;
+        border-bottom: 1px solid $turqoise;
         &:last-of-type {
           border-bottom: none;
         }
@@ -843,17 +853,16 @@ main nav - default colors for white & lightgrey bg  ????
           border-color: transparent !important;
         }
         a {
+          text-shadow: none;
           text-transform: capitalize;
           padding: 8px 18px;
-          background-color: transparent;
+          background: #fff;
           border-radius: 0;
           border-radius: $btnBorder_radius;
-          // font-size: 1.05rem;
           margin: 0 1rem;
-
-          margin: 0;
           &:hover {
-            color: $themecolorGreen;
+            background: #fff !important;
+            color: $themecolorGreen !important;
             border-color: transparent;
           }
         }
@@ -862,19 +871,24 @@ main nav - default colors for white & lightgrey bg  ????
   }
   // menu btn
   > .menu_toggle_btn {
-    position: absolute;
+    // position: relative;
     top: 0.8rem;
     right: 0;
     z-index: 10000;
-    width: 63px;
-    height: 60px;
-    padding: 1rem;
+    width: 75px;
+    height: 45px;
+    // width: 50px;
+    // height: 50px;
+    padding: 0.5rem;
     background: transparent;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: none;
+          @media all and (min-width: $sm-min) {
+              width: 65px;
+        }
     /* Hamburger Line */
     > div {
       position: relative;
@@ -939,28 +953,22 @@ main nav - default colors for white & lightgrey bg  ????
 .logo_header {
   position: relative;
   z-index: 10000;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
   &:visited {
     color: #fff;
   }
-  // span.sample_site {
-  //   display: none;
-  //   font-weight: 600;
-  //   font-size: 2.4rem;
-  //   white-space: nowrap;
-  // }
   img {
-    margin-top: 80px;
-    width: 140px;
+    width: 160px;
     height: auto;
-    padding-top: 5px;
-
-    @media all and (min-width: $md-min) {
-      padding-top: 12px;
+        @media all and (min-width: $sm-min) {
+      width: 120px;
     }
-    @media all and (min-width: $lg-min) {
-      padding-top: 0;
-      padding-right: 25px;
-      width: 170px;
+    @media all and (min-width: $xl-min) {
+      width: 100px;
     }
   }
 }
@@ -971,7 +979,7 @@ main nav - default colors for white & lightgrey bg  ????
   @media all and (min-width: $lg-min) {
     justify-content: space-between;
     flex-direction: row;
-    margin-left: 6rem;
+    margin-left: 2rem;
   }
 }
 .signup {
@@ -985,18 +993,19 @@ main nav - default colors for white & lightgrey bg  ????
   }
 }
 /*Mobile view - menu*/
-.nav-mobile {
+.nav_mobile {
   position: fixed;
   height: 100%;
   width: 100%;
   z-index: 500;
   top: 0;
   left: 0;
-  background-image: $greenOverlayColor;
+  // background-image: $greenOverlayColor;
+  background: $themecolorGreenDark;
   padding: 1rem;
   text-align: left;
   transform: translateX(100%);
-  transition: transform 0.6s ease;
+  transition: transform 0.4s ease;
   a:focus {
     outline: 2px dotted $themecolorLight !important;
   }
@@ -1010,7 +1019,9 @@ main nav - default colors for white & lightgrey bg  ????
   ul {
     li {
       a {
-        font-size: 17px;
+        text-transform: uppercase;
+        font-size: 13px;
+        // font-size: 17px;
         letter-spacing: 0.5px;
         display: block;
         color: #fff;
@@ -1128,10 +1139,15 @@ main nav - default colors for white & lightgrey bg  ????
     }
   }
   .header_items_text {
-    max-width: 90%;
+    // max-width: 90%;
   }
   .header_heading {
     word-wrap: break-word;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+    // word-wrap: break-word;
     margin-bottom: 1.6rem;
     @media all and (min-width: $xl-min) {
       font-size: 4rem;
@@ -1443,7 +1459,7 @@ feature list
   }
   .img_box {
     width: 7rem;
-    padding: 0 0.1rem 1rem 0;
+    padding: 0 1rem 1rem 0;
     span {
       border-radius: $btnBorder_radius;
       display: flex;
@@ -1485,7 +1501,6 @@ feature list
     }
   }
 }
-
 .card_container {
   position: relative;
   background: #fff;
@@ -1652,22 +1667,30 @@ feature list
     }
   }
 }
+.medium_text {
+  @media all and (min-width: $lg-min) {
+    max-width: 80%;
+  }
+}
 .card_container {
   padding: 1rem 0;
   background: transparent;
-  border: 1px solid $themecolor;
+  border: 1px solid $themecolorGreenDark;
   .title {
     color: $themecolor;
   }
   &:hover {
-    transform: none;
+    .title {
+      color: $themecolor;
+    }
   }
   .icon {
     margin-bottom: 1rem;
     padding: 0.5rem;
     border-radius: 5px;
-    width: 2.5rem;
-    border: 1px solid $themecolor;
+    width: 3rem;
+    height: 2.8rem;
+    border: 1px solid $themecolorGreenDark;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1675,9 +1698,10 @@ feature list
     i.fa-classic,
     .fa-regular,
     .fa-solid,
+    .fa-brands,
     .far,
     .fas {
-      color: #fff;
+      // color: #fff;
       font-size: $iconsize;
     }
   }
@@ -1852,32 +1876,33 @@ text content field
       align-items: center;
       font-size: 1.3rem;
     }
-    .email_icon {
-      display: inline-block;
-      font-size: 1.2rem;
-      margin-right: 0.5rem;
-    }
+    // .email_icon {
+    //   display: inline-block;
+    //   font-size: 1.2rem;
+    //   margin-right: 0.5rem;
+    // }
     p {
       margin: 0;
     }
     a {
+      font-size: 0.9rem;
       margin: 0.8rem 0;
+      @media all and (min-width: $sm-min) {
+        font-size: 1.1rem;
+      }
     }
   }
   .logo_footer {
     img {
-      width: 110px;
-      margin-bottom: 1rem;
-      @media all and (min-width: $lg-min) {
-        width: 120px;
+      width: 80px;
+      height: auto;
+      @media all and (min-width: $md-min) {
+        width: 90px;
+      }
+      @media all and (min-width: $xl-min) {
+        width: 100px;
       }
     }
-    // img {
-    //   width: 140px;
-    //   @media all and (min-width: $lg-min) {
-    //     width: 170px;
-    //   }
-    // }
   }
   .underscore_link {
     font-size: 1.1rem;

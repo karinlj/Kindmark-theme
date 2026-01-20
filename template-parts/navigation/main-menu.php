@@ -5,7 +5,7 @@ if (is_home() || is_archive()) {
     $color = get_field('header_background', get_option('page_for_posts'));
 }
 ?>
-<div id="nav-wrap" class="">
+<div id="nav_wrap" class="">
     <div class="container">
 
         <nav class="main_menu" role="navigation" aria-label="Main Navigation">
@@ -16,7 +16,7 @@ if (is_home() || is_archive()) {
                             alt="Kindmarks logo" />  -->
 
                 <img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_01.png"
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_circle__small.png"
                     width="100" height="auto" alt="Kindmarks logo" />
                 <!-- <span class="sample_site">Sample site</span> -->
             </a>
@@ -50,7 +50,7 @@ if (is_home() || is_archive()) {
 
 </div>
 
-<div class="nav-mobile">
+<div class="nav_mobile">
     <div class="nav_links">
         <?php  //wp_nav_menu();
         wp_nav_menu(array(
@@ -60,7 +60,7 @@ if (is_home() || is_archive()) {
         <div class="signup">
             <ul>
                 <li>
-                    <a class="btn_link green" href="<?php echo esc_url(home_url('/Kindmarks/#footer')); ?>"
+                    <a class="btn_link green" href="<?php echo esc_url(home_url('#footer')); ?>"
                         aria-label="Kontakt">
                         Kontakta Oss
                     </a>

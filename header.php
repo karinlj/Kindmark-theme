@@ -23,8 +23,8 @@
     }
     $header_class = 'header_main';
     $style = '';
-    $row_class = 'justify-content-start';
-    $col_class = 'col-md-10';
+    // $row_class = 'justify-content-start';
+    // $col_class = 'col-md-10';
     $bg_image = get_field('background_image', $page_domain);
     $overlay_color = '';
     $color = get_field('header_background', $page_domain);
@@ -34,14 +34,10 @@
     $telephone_link = get_field('telephone_link');
 
     if (is_front_page()) {
-        $header_class = 'header_main darkgreen front';
-        $row_class = 'justify-content-start';
-        $col_class = 'col-md-10';
+        $header_class = 'header_main front';
     }
     if (is_404()) {
-        $header_class = 'header_main darkgreen not_found';
-        $row_class = 'justify-content-start';
-        $col_class = 'col-md-10';
+        $header_class = 'header_main not_found';
     }
     if (is_singular('post')) {
         $header_class = 'header_main single_post';
@@ -58,8 +54,9 @@
 
         <div class="header_items_section section_spacing_top_small">
             <div class="container">
-                <div class="row <?php echo $row_class; ?>">
-                    <div class="<?php echo $col_class; ?>">
+                <div class="row">
+                    <div class="col-md-10">
+                        
                         <!-- heading and text-->
                         <div class="header_items_text">
                             <?php
@@ -78,7 +75,7 @@
 
                         <!-- button links -->
                         <div class="btn_container">
-                            
+
                             <?php if (have_rows('btn_links')) { ?>
                                 <?php while (have_rows('btn_links')) {
                                     the_row();

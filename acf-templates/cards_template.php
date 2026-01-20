@@ -5,7 +5,7 @@ if (get_row_layout() == 'cards_template') {
     $bg_color = get_sub_field('background_color');
     $bg_image = get_sub_field('background_image');
     $overlay_color_class = '';
-    if ($bg_image) {
+    if ($bg_image && $bg_color !== 'lighturqoise') {
         $style = 'style="background:url(\'' . wp_get_attachment_url($bg_image, 'full') . '\') no-repeat center; background-size: cover"';
         $overlay_color_class = 'overlay-darker';
     }  ?>
@@ -45,10 +45,7 @@ if (get_row_layout() == 'cards_template') {
                                 <?php if ($bg_color === 'darkgreen') {
                                     $btn_class = 'btn_link outline_color_lightgreen';
                                 } ?>
-                                <?php if ($bg_image) {
-                                    $btn_class = 'btn_link outline_color_white';
-                                } ?>
-
+                        
                                 <?php if ($link) { ?>
                                     <a class="<?php echo $btn_class ?>" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>" rel="noopener noreferrer"><?php echo esc_html($link['title']); ?>
                                     </a>

@@ -6,7 +6,7 @@
  <?php
     if (function_exists('acf_add_options_page')) { ?>
      <main class="page_main">
-         <section class="nopage_section section_spacing_top_mini">
+         <section class="nopage_section lighturqoise section_spacing_top_mini">
              <div class="container">
                  <div class="row">
                      <div class="col-md-10">

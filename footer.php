@@ -1,5 +1,5 @@
 <!-- signup field -->
- <!-- <section class="signup_section  section_spacing_top_small">
+<!-- <section class="signup_section  section_spacing_top_small">
     <div class="container">
         <?php
         $footer_text = get_field('footer_text', 'option');
@@ -35,42 +35,47 @@
     <div class="container">
         <div class="row align-items-start justify-content-between">
             <div class="col-12 col-md-6 col-xl-5">
-                <div class="logo_footer">
+                <div class="logo_footer margin_2">
                     <a href="<?php echo home_url() ?>" aria-label="Home page">
                         <!-- <h2 class="colored_light_green_part">Sample site logo</h2> -->
                         <img
-                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_01.png"
+                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_circle__small.png"
                             width="100" height="auto" alt="Kindmarks logo" />
                         <!-- <img class="logo_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse.png" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse@2x.png 325w" width="208" height="51" alt="Boozang home page" /> -->
                     </a>
                 </div>
-                <h2>Har du ett projekt du behöver hjälp med? </h2>
+                <h2>Behöver ni hjälp med ett trädgårdsprojekt? </h2>
 
                 <div class="customer_contact" id="contact_us">
-                    <p>Hör gärna av dig om du har frågor!</p>
-
+                    <!-- <p></p> -->
 
                     <!-- <a href="mailto:sample_site@gmail.com" class="underscore_link colored_blue_part" >sample_site@gmail.com</a> -->
-                    <?php $mail_link = get_field('mail_link', 'option');
-                    if ($mail_link) { ?>
-                        <div>
-                            <span class="email_icon colored_light_green_part"><i class="fa-regular fa-envelope"></i>
-                            </span><a href="<?php echo esc_url('mailto:' . antispambot(($mail_link))); ?>" class="underscore_link colored_light_green_part" target="_top" aria-label="Company email"><?php echo esc_html($mail_link); ?>
-                            </a>
-                        </div>
-
-                    <?php   } ?>
-
                     <?php $telephone = get_field('telephone', 'option');
                     if ($telephone) { ?>
                         <div>
                             <span class="email_icon colored_light_green_part"><i class="fa-solid fa-phone"></i>
                             </span>
+                            <!-- <span>Telefon:</span> -->
                             <a href="tel:<?php echo $telephone; ?>" class="underscore_link colored_light_green_part" target="_top" aria-label="Company telephone"><?php echo $telephone; ?>
                             </a>
                         </div>
 
                     <?php   } ?>
+
+                    <?php $mail_link = get_field('mail_link', 'option');
+                    if ($mail_link) { ?>
+                        <div>
+                            <!-- <span>Email:</span> -->
+                            <span class="email_icon colored_light_green_part"><i class="fa-regular fa-envelope"></i>
+                            </span>
+
+                            <a href="<?php echo esc_url('mailto:' . antispambot(($mail_link))); ?>" class="underscore_link colored_light_green_part" target="_top" aria-label="Company email"><?php echo esc_html($mail_link); ?>
+                            </a>
+                        </div>
+
+                    <?php   } ?>
+
+
                 </div>
                 <div class="social_icons">
                     <ul class="social">
@@ -144,7 +149,7 @@
                 <div class="col-10">
 
                     <div class="copy">
-                        <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> | <a href="http://localhost/Kindmarks/integritetspolicy/" target="_blank" rel="noopener noreferrer" aria-label="Integritetspolicy"><span class="colored_light_green_part">Integritetspolicy</span></a></br>
+                        <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?>  <a href="http://localhost/Kindmarks/integritetspolicy/" target="_blank" rel="noopener noreferrer" aria-label="Integritetspolicy"><span class="colored_light_green_part">Integritetspolicy</span></a></br>
                             Site & design av <a href="http://frilans.karinljunggren.com/" target="_blank" rel="noopener noreferrer" aria-label="Karin Ljunggren Home Page"><span class="colored_light_green_part">Karin Ljunggren</span></a>
                         </p>
                     </div>
