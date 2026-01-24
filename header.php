@@ -61,11 +61,11 @@
                         <div class="header_items_text">
                             <?php
                             if ($header_heading) { ?>
-                                <h1 class="header_heading"><?php echo $header_heading; ?></h1>
+                                <h1 class="header_heading"><wbr><?php echo $header_heading; ?></h1>
                             <?php }  ?>
 
                             <?php if ($header_text) { ?>
-                                <p class="header_text"><?php echo $header_text; ?></p>
+                                <p class="medium_text"><?php echo $header_text; ?></p>
                             <?php } ?>
                             <!-- <?php if (is_singular('post')): ?> <h1> <?php the_title(); ?></h1>
                             <?php endif; ?> -->

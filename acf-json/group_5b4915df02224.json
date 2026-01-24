@@ -870,7 +870,7 @@
                                     "name": "img",
                                     "aria-label": "",
                                     "type": "image",
-                                    "instructions": "Image size 500 x 375 pixels or aspect ratio 4:3.",
+                                    "instructions": "Image size 800 x 600 pixels or aspect ratio 4:3.",
                                     "required": 1,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -931,5 +931,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1768421604
+    "modified": 1769201389
 }

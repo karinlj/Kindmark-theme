@@ -52,10 +52,10 @@
                     <!-- <a href="mailto:sample_site@gmail.com" class="underscore_link colored_blue_part" >sample_site@gmail.com</a> -->
                     <?php $telephone = get_field('telephone', 'option');
                     if ($telephone) { ?>
-                        <div>
-                            <span class="email_icon colored_light_green_part"><i class="fa-solid fa-phone"></i>
+                        <div class="customer_contact_info">
+                            <span class="contact_icon colored_light_green_part"><i class="fa-solid fa-phone"></i>
                             </span>
-                            <!-- <span>Telefon:</span> -->
+                            <span class="contact_text">Telefon:</span>
                             <a href="tel:<?php echo $telephone; ?>" class="underscore_link colored_light_green_part" target="_top" aria-label="Company telephone"><?php echo $telephone; ?>
                             </a>
                         </div>
@@ -64,11 +64,10 @@
 
                     <?php $mail_link = get_field('mail_link', 'option');
                     if ($mail_link) { ?>
-                        <div>
-                            <!-- <span>Email:</span> -->
-                            <span class="email_icon colored_light_green_part"><i class="fa-regular fa-envelope"></i>
+                        <div class="customer_contact_info">
+                            <span class="contact_icon colored_light_green_part"><i class="fa-regular fa-envelope"></i>
                             </span>
-
+                            <span class="contact_text">Email:</span>
                             <a href="<?php echo esc_url('mailto:' . antispambot(($mail_link))); ?>" class="underscore_link colored_light_green_part" target="_top" aria-label="Company email"><?php echo esc_html($mail_link); ?>
                             </a>
                         </div>
