@@ -304,7 +304,7 @@ button.outline_color_white:hover,
 button.outline_color_dark,
 .btn.outline_color_dark,
 .btn_link.outline_color_dark {
-  background: #fff;
+  background: transparent;
   border-color: #131720;
   color: #131720;
 }
@@ -457,6 +457,7 @@ a:focus {
   color: #fff;
   font-weight: 500;
   font-size: 1.2rem;
+  margin: 0.7rem 1rem 0.7rem 0;
 }
 @media all and (min-width: 1200px) {
   .underscore_link {
@@ -1688,15 +1689,6 @@ feature list
 *********************/
 .info_banner {
   min-height: 310px;
-}
-.info_banner p {
-  line-height: 1.8;
-}
-.info_banner .link_wrapper {
-  padding: 0.5rem 0;
-}
-.info_banner .link_wrapper a {
-  display: inline-block;
 }
 
 /**********************

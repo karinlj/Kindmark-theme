@@ -10,7 +10,7 @@ if (get_row_layout() == 'cards_template') {
         $overlay_color_class = 'overlay-darker';
     }  ?>
 
-    <section class="cards_template <?php echo $bg_color ?> section_spacing_top_medium <?php echo $overlay_color_class; ?>" <?php echo $style; ?>>
+    <section class="cards_template <?php echo $bg_color ?> section_spacing_top_small <?php echo $overlay_color_class; ?>" <?php echo $style; ?>>
         <div class="container">
             <?php
             $heading = get_sub_field('heading');

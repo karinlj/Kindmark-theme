@@ -263,7 +263,7 @@ button,
     }
   }
   &.outline_color_dark {
-    background: #fff;
+    background: transparent;
     border-color: $darkGray;
     color: $darkGray;
     &:hover {
@@ -392,6 +392,7 @@ a {
   color: #fff;
   font-weight: 500;
   font-size: 1.2rem;
+  margin: 0.7rem 1rem 0.7rem 0;
   @media all and (min-width: $xl-min) {
     font-size: 1.3rem;
   }
@@ -1438,15 +1439,6 @@ feature list
 *********************/
 .info_banner {
   min-height: 310px;
-  p {
-    line-height: 1.8;
-  }
-  .link_wrapper {
-    padding: 0.5rem 0;
-    a {
-      display: inline-block;
-    }
-  }
 }
 
 /**********************

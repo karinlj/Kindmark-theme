@@ -50,12 +50,14 @@ if (get_row_layout() == 'text_or_image_field') {
                             <div class="part text">
                                 <div><?php the_sub_field('text'); ?></div>
 
-                                <?php $link = get_sub_field('link'); ?>
-                                <?php $link_no_2 = get_sub_field('link_no_2'); ?>
+                                <?php $link = get_sub_field('link');
+                                $link_no_2 = get_sub_field('link_no_2');
+                                $link_no_3 = get_sub_field('link_no_3');
+                                ?>
 
                                 <?php
                                 $btn_class = 'outline_color_white';
-                                if ($color == 'white') {
+                                if ($color == 'white' | $color == 'lighturqoise') {
                                     $btn_class = 'outline_color_dark';
                                 } ?>
                                 <?php if ($link) { ?>
@@ -65,6 +67,11 @@ if (get_row_layout() == 'text_or_image_field') {
                                 <?php } ?>
                                 <?php if ($link_no_2) { ?>
                                     <a class="btn_link <?php echo $btn_class ?>" href="<?php echo $link_no_2['url']; ?>" target="<?php echo $link_no_2['target']; ?>"
+                                        rel="noopener noreferrer"><?php echo $link_no_2['title']; ?>
+                                    </a>
+                                <?php } ?>
+                                <?php if ($link_no_3) { ?>
+                                    <a class="btn_link <?php echo $btn_class ?>" href="<?php echo $link_no_3['url']; ?>" target="<?php echo $link_no_3['target']; ?>"
                                         rel="noopener noreferrer"><?php echo $link_no_2['title']; ?>
                                     </a>
                                 <?php } ?>
