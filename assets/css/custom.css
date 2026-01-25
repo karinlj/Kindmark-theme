@@ -8,6 +8,16 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 */
 /* colors */
+@keyframes transitionIn {
+  0% {
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
 /********************
      general
 *********************/
@@ -39,6 +49,22 @@ ol {
   display: none;
 }
 
+.color_lightgreen {
+  color: #d9fc83 !important;
+}
+
+.green {
+  color: #00a87b;
+}
+
+.green_dark {
+  color: #184e4a;
+}
+
+.dark_text {
+  color: #131720;
+}
+
 .colored_green_part {
   background-image: linear-gradient(to right top, #00cc96, #5edab1, #8fe7cb, #bbf3e2, #e6fff8);
   -webkit-background-clip: text;
@@ -61,18 +87,6 @@ ol {
   background-image: linear-gradient(to right top, #00a2ff, #52b6ff, #7dc8ff, #a5dbff, #ccecff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.green {
-  color: #00a87b;
-}
-
-.green_dark {
-  color: #184e4a;
-}
-
-.dark_text {
-  color: #131720;
 }
 
 hr {
@@ -384,15 +398,15 @@ button.outline_color_green:hover,
 button.outline_color_lightgreen,
 .btn.outline_color_lightgreen,
 .btn_link.outline_color_lightgreen {
-  border-color: #daff7d;
-  color: #daff7d;
+  border-color: #d9fc83;
+  color: #d9fc83;
   background: transparent;
 }
 button.outline_color_lightgreen:hover,
 .btn.outline_color_lightgreen:hover,
 .btn_link.outline_color_lightgreen:hover {
   color: #184e4a;
-  background: #daff7d;
+  background: #d9fc83;
 }
 
 /********************
@@ -844,7 +858,7 @@ footer.darkgreen .underscore_link,
 footer.darkgray .underscore_link,
 .card_container.darkgreen .underscore_link,
 .card_container.darkgray .underscore_link {
-  color: #daff7d;
+  color: #d9fc83;
 }
 section.darkgreen .underscore_link:before, section.darkgray .underscore_link:before,
 header.darkgreen .underscore_link:before,
@@ -853,7 +867,7 @@ footer.darkgreen .underscore_link:before,
 footer.darkgray .underscore_link:before,
 .card_container.darkgreen .underscore_link:before,
 .card_container.darkgray .underscore_link:before {
-  background: #daff7d;
+  background: #d9fc83;
 }
 section.white h1,
 section.white h2,
@@ -1005,7 +1019,6 @@ main nav - default colors for white & lightgrey bg  ????
 #nav_wrap {
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   width: 100%;
-  top: 0px;
   height: 100px;
   border-bottom: 1px solid #a6b0bf;
   background: rgba(0, 0, 0, 0.225);
@@ -1026,7 +1039,6 @@ main nav - default colors for white & lightgrey bg  ????
 }
 @media all and (min-width: 768px) {
   #nav_wrap {
-    padding: 0rem calc(3rem - 15px);
     height: 110px;
   }
 }
@@ -1054,7 +1066,7 @@ main nav - default colors for white & lightgrey bg  ????
   display: none;
   border-radius: 3px;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 768px) {
   .main_menu ul {
     display: flex;
     align-items: center;
@@ -1075,7 +1087,7 @@ main nav - default colors for white & lightgrey bg  ????
   font-weight: 600;
   letter-spacing: 0.6px;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 768px) {
   .main_menu ul li a {
     font-size: 12px;
   }
@@ -1144,6 +1156,7 @@ main nav - default colors for white & lightgrey bg  ????
   border-color: transparent !important;
 }
 .main_menu li.menu-item-has-children ul li a {
+  font-size: 13px;
   text-shadow: none;
   text-transform: capitalize;
   padding: 8px 18px;
@@ -1209,7 +1222,7 @@ main nav - default colors for white & lightgrey bg  ????
   background: inherit;
   top: 10px;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 768px) {
   .main_menu > .menu_toggle_btn {
     display: none;
   }
@@ -1239,23 +1252,29 @@ main nav - default colors for white & lightgrey bg  ????
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 3rem;
+  margin-right: 1rem;
 }
 .logo_header:visited {
   color: #fff;
 }
 .logo_header img {
-  width: 160px;
+  width: 7rem;
   height: auto;
 }
 @media all and (min-width: 576px) {
   .logo_header img {
-    width: 120px;
+    width: 6rem;
+  }
+}
+@media all and (min-width: 992px) {
+  .logo_header img {
+    width: 6rem;
   }
 }
 @media all and (min-width: 1200px) {
   .logo_header img {
-    width: 100px;
+    width: 5.5rem;
+    margin-right: 3rem;
   }
 }
 
@@ -1264,10 +1283,15 @@ main nav - default colors for white & lightgrey bg  ????
   flex-direction: column;
   width: 100%;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 768px) {
   .nav_links {
     justify-content: space-between;
     flex-direction: row;
+    margin-left: 0.5rem;
+  }
+}
+@media all and (min-width: 992px) {
+  .nav_links {
     margin-left: 2rem;
   }
 }
@@ -1288,28 +1312,24 @@ main nav - default colors for white & lightgrey bg  ????
 /*Mobile view - menu*/
 .nav_mobile {
   position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 500;
   top: 0;
   left: 0;
+  z-index: 100;
   background: #184e4a;
-  padding: 1rem;
+  padding: 0 1rem;
+  padding-top: 20px;
   text-align: left;
-  transform: translateX(100%);
-  transition: transform 0.4s ease;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
   /*toggle open*/
 }
 .nav_mobile a:focus {
   outline: 2px dotted #66758d !important;
 }
-@media all and (min-width: 992px) {
-  .nav_mobile {
-    display: none;
-  }
-}
 .nav_mobile .nav_links {
-  margin-top: 8rem;
+  margin-top: 6rem;
   margin-left: 1rem;
 }
 .nav_mobile ul {
@@ -1317,7 +1337,7 @@ main nav - default colors for white & lightgrey bg  ????
 }
 .nav_mobile ul li a {
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.5px;
   display: block;
   color: #fff;
@@ -1372,8 +1392,14 @@ main nav - default colors for white & lightgrey bg  ????
   margin-left: 10px;
 }
 .nav_mobile.menu_open {
-  overflow-x: auto;
-  transform: translateX(0);
+  display: block;
+  animation: transitionIn 500ms cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  pointer-events: all;
+}
+@media all and (min-width: 768px) {
+  .nav_mobile.menu_open {
+    display: none;
+  }
 }
 
 /*********************
@@ -1394,7 +1420,7 @@ main nav - default colors for white & lightgrey bg  ????
   font-size: 1.5rem;
 }
 .header_main .underscore_link:before {
-  background: #daff7d;
+  background: #d9fc83;
 }
 .header_main .btn_container {
   padding-bottom: 3rem;
@@ -1902,7 +1928,7 @@ feature list
   border: 1px solid #fff;
 }
 .cards_template.darkgreen .card_container .icon {
-  color: #daff7d;
+  color: #d9fc83;
   border-color: #fff;
 }
 .cards_template.darkgreen .card_container .title {
@@ -2105,7 +2131,7 @@ text content field
 }
 
 /*********************
-   footer and signup
+   footer 
 *********************/
 .footer_main {
   background: #184e4a;
@@ -2148,18 +2174,8 @@ text content field
     font-size: 1.1rem;
   }
 }
-@media all and (min-width: 576px) {
-  .footer_main .customer_contact .contact_text {
-    display: none;
-  }
-}
 .footer_main .customer_contact .contact_icon {
-  display: none;
-}
-@media all and (min-width: 576px) {
-  .footer_main .customer_contact .contact_icon {
-    display: inline;
-  }
+  margin-right: 0.5rem;
 }
 .footer_main .logo_footer img {
   width: 80px;
@@ -2201,31 +2217,6 @@ text content field
 .footer_main .social_icons .fa-brands:hover {
   transform: translateX(2px);
   color: #fff;
-}
-.footer_main .footer_links_heading {
-  padding-top: 1rem;
-  text-transform: uppercase;
-  font-size: 13px;
-}
-@media all and (min-width: 768px) {
-  .footer_main .footer_links_heading {
-    padding-top: 0;
-    font-size: 15px;
-  }
-}
-.footer_main .footer_links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.footer_main .footer_links li {
-  margin-bottom: 1rem;
-  transition: all 0.25s ease;
-}
-.footer_main .footer_links li:hover {
-  transform: translateY(-1px);
-  transition: all 0.25s ease;
-  text-decoration: none;
 }
 .footer_main .badges {
   display: flex;

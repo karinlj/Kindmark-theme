@@ -1,6 +1,6 @@
 {
     "key": "group_583c34d7264bd",
-    "title": "Social icons",
+    "title": "Contact info",
     "fields": [
         {
             "key": "field_5b583c92619cf",
@@ -135,5 +135,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1763988754
+    "modified": 1769369203
 }

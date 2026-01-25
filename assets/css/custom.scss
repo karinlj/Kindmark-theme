@@ -9,6 +9,17 @@ License: GNU General Public License v2 or later
 @import "_mixins.scss";
 @import "variables.scss";
 
+//animation
+@keyframes transitionIn {
+  0% {
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
 /********************
      general
 *********************/
@@ -37,6 +48,18 @@ ol {
   display: none;
 }
 //colored text
+.color_lightgreen {
+  color: $themecolorLightGreen !important;
+}
+.green {
+  color: $themecolorGreen;
+}
+.green_dark {
+  color: $themecolorGreenDark;
+}
+.dark_text {
+  color: $darkGray;
+}
 .colored_green_part {
   background-image: linear-gradient(
     to right top,
@@ -88,15 +111,7 @@ ol {
   -webkit-text-fill-color: transparent;
 }
 
-.green {
-  color: $themecolorGreen;
-}
-.green_dark {
-  color: $themecolorGreenDark;
-}
-.dark_text {
-  color: $darkGray;
-}
+
 hr {
   width: 250px;
   border-top: 1px solid #d3d6de;
@@ -711,8 +726,6 @@ main nav - default colors for white & lightgrey bg  ????
 #nav_wrap {
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   width: 100%;
-  // position: absolute;
-  top: 0px;
   height: 100px;
   border-bottom: 1px solid $themecolorLightest;
   // background: transparent;
@@ -725,11 +738,9 @@ main nav - default colors for white & lightgrey bg  ????
     display: flex;
     justify-content: center;
     align-items: center;
-    // border-bottom: 1px solid $themeBorderColor;
     padding: 0rem calc(3rem - 15px);
   }
   @media all and (min-width: $md-min) {
-    padding: 0rem calc(3rem - 15px);
     height: 110px;
   }
   @media all and (min-width: $xl-min) {
@@ -739,10 +750,8 @@ main nav - default colors for white & lightgrey bg  ????
 .main_menu {
   position: relative;
   background: transparent;
-  // padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  // justify-content: space-between;
   height: 100px;
   a,
   a:visited,
@@ -753,7 +762,7 @@ main nav - default colors for white & lightgrey bg  ????
   ul {
     display: none;
     border-radius: 3px;
-    @media all and (min-width: $lg-min) {
+    @media all and (min-width: $md-min) {
       display: flex;
       align-items: center;
     }
@@ -771,7 +780,7 @@ main nav - default colors for white & lightgrey bg  ????
         color: $navcolor;
         font-weight: 600;
         letter-spacing: 0.6px;
-        @media all and (min-width: $lg-min) {
+        @media all and (min-width: $md-min) {
           font-size: 12px;
         }
         &:hover {
@@ -858,6 +867,7 @@ main nav - default colors for white & lightgrey bg  ????
           border-color: transparent !important;
         }
         a {
+          font-size: 13px;
           text-shadow: none;
           text-transform: capitalize;
           padding: 8px 18px;
@@ -928,7 +938,7 @@ main nav - default colors for white & lightgrey bg  ????
       }
     }
     //hide veggoburger
-    @media all and (min-width: $lg-min) {
+    @media all and (min-width: $md-min) {
       display: none;
     }
     //rotate veggoburger
@@ -962,18 +972,25 @@ main nav - default colors for white & lightgrey bg  ????
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 3rem;
+  margin-right: 1rem;
   &:visited {
     color: #fff;
   }
   img {
-    width: 160px;
+    width: 7rem;
     height: auto;
     @media all and (min-width: $sm-min) {
-      width: 120px;
+      width: 6rem;
+    }
+    // @media all and (min-width: $md-min) {
+    //   width: 7rem;
+    // }
+    @media all and (min-width: $lg-min) {
+      width: 6rem;
     }
     @media all and (min-width: $xl-min) {
-      width: 100px;
+      width: 5.5rem;
+      margin-right: 3rem;
     }
   }
 }
@@ -981,9 +998,12 @@ main nav - default colors for white & lightgrey bg  ????
   display: flex;
   flex-direction: column;
   width: 100%;
-  @media all and (min-width: $lg-min) {
+  @media all and (min-width: $md-min) {
     justify-content: space-between;
     flex-direction: row;
+    margin-left: 0.5rem;
+  }
+  @media all and (min-width: $lg-min) {
     margin-left: 2rem;
   }
 }
@@ -1000,33 +1020,29 @@ main nav - default colors for white & lightgrey bg  ????
 /*Mobile view - menu*/
 .nav_mobile {
   position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 500;
   top: 0;
   left: 0;
-  // background-image: $greenOverlayColor;
+  z-index: 100;
   background: $themecolorGreenDark;
-  padding: 1rem;
+  padding: 0 1rem;
+  padding-top: 20px;
   text-align: left;
-  transform: translateX(100%);
-  transition: transform 0.4s ease;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
   a:focus {
     outline: 2px dotted $themecolorLight !important;
   }
-  @media all and (min-width: $lg-min) {
-    display: none;
-  }
   .nav_links {
-    margin-top: 8rem;
+    margin-top: 6rem;
     margin-left: 1rem;
   }
   ul {
     li {
       a {
         text-transform: uppercase;
-        font-size: 13px;
-        // font-size: 17px;
+        font-size: 14px;
         letter-spacing: 0.5px;
         display: block;
         color: #fff;
@@ -1092,8 +1108,12 @@ main nav - default colors for white & lightgrey bg  ????
 
   /*toggle open*/
   &.menu_open {
-    overflow-x: auto;
-    transform: translateX(0);
+    display: block;
+    animation: transitionIn 500ms cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    pointer-events: all;
+    @media all and (min-width: $md-min) {
+      display: none;
+    }
   }
 }
 
@@ -1854,29 +1874,8 @@ text content field
 }
 
 /*********************
-   footer and signup
+   footer 
 *********************/
-//signup for pages
-// .signup_section {
-//   background: $themecolorLightGreen;
-//   .btn_container {
-//     justify-content: center;
-//     .btn_link {
-//       box-shadow: $themeBox_shadow;
-//       &.green {
-//         box-shadow: $themeBox_shadow;
-//         color: #fff;
-//         &:hover {
-//           color: $themecolorGreen;
-//         }
-//       }
-//     }
-//   }
-
-//   .angle {
-//     font-size: 2.5rem;
-//   }
-// }
 .footer_main {
   background: $themecolorGreenDark;
   display: flex;
@@ -1904,7 +1903,7 @@ text content field
     p {
       margin: 0;
     }
-    .customer_contact_info{
+    .customer_contact_info {
       margin: 1.5rem 0;
     }
     a {
@@ -1913,16 +1912,8 @@ text content field
         font-size: 1.1rem;
       }
     }
-    .contact_text {
-      @media all and (min-width: $sm-min) {
-        display: none;
-      }
-    }
     .contact_icon {
-      display: none;
-      @media all and (min-width: $sm-min) {
-        display: inline;
-      }
+   margin-right: 0.5rem;
     }
   }
   .logo_footer {
@@ -1965,34 +1956,31 @@ text content field
       }
     }
   }
-  // .links {
-  //   @media all and (min-width: $lg-min) {
-  //     justify-content: flex-end;
+
+  // .footer_links_heading {
+  //   padding-top: 1rem;
+  //   text-transform: uppercase;
+  //   font-size: 13px;
+  //   @media all and (min-width: $md-min) {
+  //     padding-top: 0;
+  //     font-size: 15px;
   //   }
   // }
-  .footer_links_heading {
-    padding-top: 1rem;
-    text-transform: uppercase;
-    font-size: 13px;
-    @media all and (min-width: $md-min) {
-      padding-top: 0;
-      font-size: 15px;
-    }
-  }
-  .footer_links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    li {
-      margin-bottom: 1rem;
-      transition: all 0.25s ease;
-      &:hover {
-        transform: translateY(-1px);
-        transition: all 0.25s ease;
-        text-decoration: none;
-      }
-    }
-  }
+  // .footer_links {
+  //   list-style: none;
+  //   padding: 0;
+  //   margin: 0;
+  //   li {
+  //     margin-bottom: 1rem;
+  //     transition: all 0.25s ease;
+  //     &:hover {
+  //       transform: translateY(-1px);
+  //       transition: all 0.25s ease;
+  //       text-decoration: none;
+  //     }
+  //   }
+  // }
+
   .badges {
     display: flex;
     flex-wrap: wrap;

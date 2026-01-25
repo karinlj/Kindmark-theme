@@ -1,35 +1,3 @@
-<!-- signup field -->
-<!-- <section class="signup_section  section_spacing_top_small">
-    <div class="container">
-        <?php
-        $footer_text = get_field('footer_text', 'option');
-        $sign_up_link = get_field('sign_up_link', 'option');
-        $sign_up_link_demo = get_field('sign_up_link_demo', 'option'); ?>
-        <div class="text_center">
-
-            <h2>Välkommen att kontakta oss!</h2>
-            <div class="angle">
-            <i class="fa-solid fa-angle-down"></i>
-            </div>
-
-            <?php if ($footer_text) { ?>
-                <?php echo $footer_text; ?>
-            <?php
-            } ?>
-        </div>
-      <div class="btn_container">
-            <?php if ($sign_up_link) { ?>
-                <a class="btn_link green" href="<?php echo $sign_up_link['url']; ?>" target="<?php echo $sign_up_link['target']; ?>" rel="noopener noreferrer"><?php echo $sign_up_link['title']; ?>
-                </a>
-            <?php } ?>
-            <?php if ($sign_up_link_demo) { ?>
-                <a class="btn_link outline_color_dark" href="<?php echo $sign_up_link_demo['url']; ?>" target="<?php echo $sign_up_link_demo['target']; ?>" rel="noopener noreferrer"><?php echo $sign_up_link_demo['title']; ?>
-                </a>
-            <?php } ?>
-        </div> 
-    </div>
-</section>  -->
-
 <!-- footer -->
 <footer id="footer" class="footer_main section_spacing_top_small darkgreen">
     <div class="container">
@@ -44,36 +12,42 @@
                         <!-- <img class="logo_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse.png" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse@2x.png 325w" width="208" height="51" alt="Boozang home page" /> -->
                     </a>
                 </div>
-                <h2>Behöver ni hjälp med ett trädgårdsprojekt? </h2>
+
+                <?php $footer_heading = get_field('footer_heading', 'option');
+                if ($footer_heading) { ?>
+                    <h2 class="footer_heading">
+                        <?php echo $footer_heading; ?>
+                    </h2>
+                <?php   } ?>
 
                 <div class="customer_contact" id="contact_us">
-                    <!-- <p></p> -->
 
-                    <!-- <a href="mailto:sample_site@gmail.com" class="underscore_link colored_blue_part" >sample_site@gmail.com</a> -->
                     <?php $telephone = get_field('telephone', 'option');
                     if ($telephone) { ?>
                         <div class="customer_contact_info">
-                            <span class="contact_icon colored_light_green_part"><i class="fa-solid fa-phone"></i>
-                            </span>
-                            <span class="contact_text">Telefon:</span>
-                            <a href="tel:<?php echo $telephone; ?>" class="underscore_link colored_light_green_part" target="_top" aria-label="Company telephone"><?php echo $telephone; ?>
+                            <p>
+                                <span class="contact_icon color_lightgreen"><i class="fa-solid fa-phone"></i>
+                                </span>
+                                <span class="">Telefon:</span>
+                            </p>
+                            <a href="tel:<?php echo $telephone; ?>" class="underscore_link " target="_top" aria-label="Company telephone"><?php echo $telephone; ?>
                             </a>
                         </div>
-
                     <?php   } ?>
 
                     <?php $mail_link = get_field('mail_link', 'option');
                     if ($mail_link) { ?>
                         <div class="customer_contact_info">
-                            <span class="contact_icon colored_light_green_part"><i class="fa-regular fa-envelope"></i>
-                            </span>
-                            <span class="contact_text">Email:</span>
-                            <a href="<?php echo esc_url('mailto:' . antispambot(($mail_link))); ?>" class="underscore_link colored_light_green_part" target="_top" aria-label="Company email"><?php echo esc_html($mail_link); ?>
+                            <p>
+                                <span class="contact_icon color_lightgreen"><i class="fa-regular fa-envelope"></i>
+                                </span>
+                                <span class="">Email:</span>
+                            </p>
+                            <a href="<?php echo esc_url('mailto:' . antispambot(($mail_link))); ?>" class="underscore_link " target="_top" aria-label="Company email"><?php echo esc_html($mail_link); ?>
                             </a>
                         </div>
 
                     <?php   } ?>
-
 
                 </div>
                 <div class="social_icons">
@@ -100,10 +74,8 @@
             <div class="col-md-12 col-xl-6">
                 <div class="row align-items-start">
                     <div class="col">
-
-                        <div class="contact_form">
+                        <div class="contact_form margin_2">
                             <?php $text_editor = get_field('text_editor', 'option');
-
                             if ($text_editor) { ?>
                                 <?php echo $text_editor; ?>
                             <?php
@@ -116,10 +88,12 @@
 
         <div class="row align-items-start">
             <div class="col-md-12 col-xl-6">
-                <p>
-                    Org. nr: 559153-4986</br>
-                    Registrerade för F-skatt
-                </p>
+                <?php $footer_extra_info = get_field('footer_extra_info', 'option');
+                if ($footer_extra_info) { ?>
+                    <p class="footer_extra_info">
+                        <?php echo $footer_extra_info; ?>
+                    </p>
+                <?php   } ?>
 
                 <ul class="badges">
                     <?php
@@ -148,8 +122,8 @@
                 <div class="col-10">
 
                     <div class="copy">
-                        <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?>  <a href="http://localhost/Kindmarks/integritetspolicy/" target="_blank" rel="noopener noreferrer" aria-label="Integritetspolicy"><span class="colored_light_green_part">Integritetspolicy</span></a></br>
-                            Site & design av <a href="http://frilans.karinljunggren.com/" target="_blank" rel="noopener noreferrer" aria-label="Karin Ljunggren Home Page"><span class="colored_light_green_part">Karin Ljunggren</span></a>
+                        <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> <a href="http://localhost/Kindmarks/integritetspolicy/" target="_blank" rel="noopener noreferrer" aria-label="Integritetspolicy"><span class="color_lightgreen">Integritetspolicy</span></a></br>
+                            Site & design av <a href="http://frilans.karinljunggren.com/" target="_blank" rel="noopener noreferrer" aria-label="Karin Ljunggren Home Page"><span class="color_lightgreen">Karin Ljunggren</span></a>
                         </p>
                     </div>
                 </div>

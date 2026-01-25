@@ -25,8 +25,7 @@ jQuery(document).ready(function ($) {
   //Mobile menu
   //toggle classes and attributes
   $(".menu_toggle_btn").click(function () {
-    console.log("hej");
-
+    // console.log("menu_toggle_btn");
     $(this).toggleClass("btn_clicked");
     let expanded = $(this).attr("aria-expanded") === "true";
     $(this).attr("aria-expanded", !expanded);
