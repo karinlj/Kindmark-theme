@@ -84,7 +84,7 @@ ol {
 }
 
 .colored_blue_part {
-  background-image: linear-gradient(to right top, #00a2ff, #52b6ff, #7dc8ff, #a5dbff, #ccecff);
+  background-image: linear-gradient(to right top, #d9fc83, #52b6ff, #7dc8ff, #a5dbff, #ccecff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -271,7 +271,7 @@ button,
 button:focus,
 .btn:focus,
 .btn_link:focus {
-  color: #00a2ff;
+  color: #d9fc83;
   border-radius: 3px;
   border-radius: 10px;
 }
@@ -415,22 +415,21 @@ button.outline_color_lightgreen:hover,
 a {
   display: inline-block;
   position: relative;
-  color: #00a2ff;
+  color: #d9fc83;
   text-decoration: none;
   transition: all 0.3s ease-in;
 }
 a:focus {
-  color: #00a2ff;
+  color: #d9fc83;
 }
 a:active {
-  color: #00a2ff;
+  color: #d9fc83;
 }
 a:visited {
-  color: #00a2ff;
+  color: #d9fc83;
 }
 a:hover {
-  color: #1368e7;
-  text-decoration: none;
+  opacity: 0.8;
 }
 
 button:focus,
@@ -453,7 +452,7 @@ a:focus {
   content: "";
   width: 100%;
   height: 2px;
-  background: #00a2ff;
+  background: #d9fc83;
 }
 .two_columns_section a:hover,
 .text_section_pages a:hover,
@@ -1017,7 +1016,6 @@ header.overlay-none::before {
 main nav - default colors for white & lightgrey bg  ????
 ***************************************/
 #nav_wrap {
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100px;
   border-bottom: 1px solid #a6b0bf;
@@ -1077,6 +1075,7 @@ main nav - default colors for white & lightgrey bg  ????
   border-radius: 24px;
 }
 .main_menu ul li a {
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   display: flex;
   text-transform: uppercase;
   margin: 0 1rem -1px 1rem;
@@ -1174,7 +1173,7 @@ main nav - default colors for white & lightgrey bg  ????
   top: 0.8rem;
   right: 0;
   z-index: 10000;
-  width: 75px;
+  width: 65px;
   height: 45px;
   padding: 0.5rem;
   background: transparent;
@@ -1187,7 +1186,7 @@ main nav - default colors for white & lightgrey bg  ????
 }
 @media all and (min-width: 576px) {
   .main_menu > .menu_toggle_btn {
-    width: 65px;
+    width: 55px;
   }
 }
 .main_menu > .menu_toggle_btn > div {
@@ -1307,6 +1306,7 @@ main nav - default colors for white & lightgrey bg  ????
 }
 .signup .btn_link {
   padding: 12px 22px;
+  text-shadow: none;
 }
 
 /*Mobile view - menu*/
@@ -1610,7 +1610,6 @@ text_or_image_field
   }
 }
 .two_columns_section .part.image {
-  z-index: 400;
   position: relative;
   margin-top: 2rem;
 }
@@ -1788,7 +1787,7 @@ feature list
 .card_container:hover .title,
 .card_container:hover .description {
   transition: 0.25s ease-in-out;
-  color: #00a2ff;
+  color: #d9fc83;
 }
 .card_container .embed_link {
   position: absolute;
@@ -1863,30 +1862,6 @@ feature list
 .card_container.single figure img {
   border-radius: 24px;
   height: auto;
-}
-.card_container.single .wp-block-code {
-  background: #f5f2f0;
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-}
-.card_container.single .wp-block-code code {
-  color: #000;
-  text-shadow: 0 1px #fff;
-  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
-  font-size: 1em;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
 }
 
 .card_content_container {
@@ -2148,9 +2123,19 @@ text content field
 .footer_main > .container {
   margin-bottom: 1rem;
 }
-.footer_main a,
-.footer_main p {
-  color: #fff;
+.footer_main .logo_footer img {
+  width: 80px;
+  height: auto;
+}
+@media all and (min-width: 768px) {
+  .footer_main .logo_footer img {
+    width: 90px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .footer_main .logo_footer img {
+    width: 100px;
+  }
 }
 .footer_main .customer_contact {
   margin: 1rem 0;
@@ -2167,29 +2152,16 @@ text content field
   margin: 1.5rem 0;
 }
 .footer_main .customer_contact a {
-  font-size: 0.95rem;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
 }
-@media all and (min-width: 576px) {
+@media all and (max-width: 410px) {
   .footer_main .customer_contact a {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
 }
 .footer_main .customer_contact .contact_icon {
   margin-right: 0.5rem;
-}
-.footer_main .logo_footer img {
-  width: 80px;
-  height: auto;
-}
-@media all and (min-width: 768px) {
-  .footer_main .logo_footer img {
-    width: 90px;
-  }
-}
-@media all and (min-width: 1200px) {
-  .footer_main .logo_footer img {
-    width: 100px;
-  }
 }
 .footer_main .underscore_link {
   font-size: 1.1rem;
@@ -2236,15 +2208,26 @@ text content field
     max-width: 120px;
   }
 }
-.footer_main .footer_copy {
-  padding-top: 1rem;
-  margin-top: 3rem;
-  border-top: 1px solid #66758d;
+.footer_main .footer_links {
+  display: flex;
+  flex-wrap: wrap;
 }
 @media only screen and (min-width: 992px) {
-  .footer_main .footer_copy {
-    margin-top: 0;
+  .footer_main .footer_links {
+    justify-content: flex-end;
   }
+}
+.footer_main .footer_links li {
+  margin: 0 1rem 0.5rem 0;
+}
+@media only screen and (min-width: 992px) {
+  .footer_main .footer_links li {
+    margin: 0 0 0 1rem;
+  }
+}
+.footer_main .footer_copy {
+  padding-top: 1rem;
+  border-top: 1px solid #66758d;
 }
 .footer_main .footer_copy p {
   color: #cbd6e2;
@@ -2264,13 +2247,13 @@ text content field
   display: flex;
   align-items: center;
   font-size: 1.6rem;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
 }
 .footer_main .back_to_top_link a {
   color: #fff;
 }
 .footer_main .back_to_top_link:hover {
-  transform: translateX(2px);
+  transform: translateY(-2px);
 }
 
 /**********************

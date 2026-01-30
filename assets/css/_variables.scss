@@ -25,7 +25,7 @@ $turqoiseLight:  #e6f4f1; // #dcefeb;
 
 $themecolorPink: #ff5c9f;
 $themecolorLightGreen: #d9fc83; //#daff7d;
-$themecolorGreenLightest: #00e6a8;
+$themecolorLightGreenDarker: #a2e006; 
 
 $themecolorGreen: #00a87b;
 $themecolorGreenDarker: #009970;
@@ -38,8 +38,8 @@ $themeBorderColor: #e6e6e6;
 $headingcolor: #212735;
 $themecolor: $headingcolor;
 $navcolor: $themecolor;
-$linkcolor: #00a2ff;
-
+$linkcolor: $themecolorLightGreen;
+$linkcolorDark: $themecolorLightGreenDarker;
 //outline
 $themecolorLight: #66758d;
 $themecolorLightest: #a6b0bf;

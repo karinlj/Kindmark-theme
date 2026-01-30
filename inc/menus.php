@@ -21,3 +21,4 @@ function wcag_nav_menu_link_attributes($atts, $item, $args, $depth)
     return $atts;
 }
 add_filter('nav_menu_link_attributes', 'wcag_nav_menu_link_attributes', 10, 4);
+?>

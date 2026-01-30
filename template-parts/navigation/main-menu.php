@@ -7,14 +7,12 @@ if (is_home() || is_archive()) {
 ?>
 <div id="nav_wrap" class="">
     <div class="container">
-
         <nav class="main_menu" role="navigation" aria-label="Main Navigation">
             <a class="logo_header" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Home page">
                 <!--extra double size image for retina-->
                 <!-- <img
                             src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_ligg_white.png"
                             alt="Kindmarks logo" />  -->
-
                 <img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_circle__small.png"
                     width="100" height="auto" alt="Kindmarks logo" />
@@ -47,7 +45,6 @@ if (is_home() || is_archive()) {
             </button>
         </nav>
     </div>
-
 </div>
 
 <div class="nav_mobile">
@@ -60,7 +57,7 @@ if (is_home() || is_archive()) {
         <div class="signup">
             <ul>
                 <li>
-                    <a class="btn_link green" href="<?php echo esc_url(home_url('#footer')); ?>"
+                    <a class="btn_link green" href="#footer"
                         aria-label="Kontakt">
                         Kontakta Oss
                     </a>

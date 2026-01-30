@@ -36,3 +36,4 @@ add_action('wp_enqueue_scripts', function () {
 
 //limit post revisions
 if (!defined('WP_POST_REVISIONS')) define('WP_POST_REVISIONS', 3);
+?>

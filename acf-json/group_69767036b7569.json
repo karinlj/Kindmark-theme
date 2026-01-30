@@ -117,11 +117,11 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_5b47a57ae6fff",
-                    "label": "Heading",
-                    "name": "heading",
+                    "key": "field_5b47a58ee7001",
+                    "label": "Link",
+                    "name": "link",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -130,52 +130,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "parent_repeater": "field_59ae57042949a"
-                },
-                {
-                    "key": "field_5b47a583e7000",
-                    "label": "Links",
-                    "name": "links",
-                    "aria-label": "",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 0,
-                    "max": 0,
-                    "layout": "table",
-                    "button_label": "Add Link",
-                    "rows_per_page": 20,
-                    "sub_fields": [
-                        {
-                            "key": "field_5b47a58ee7001",
-                            "label": "Link",
-                            "name": "link",
-                            "aria-label": "",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "parent_repeater": "field_5b47a583e7000"
-                        }
-                    ],
+                    "return_format": "array",
                     "parent_repeater": "field_59ae57042949a"
                 }
             ]
@@ -200,5 +155,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1769370614
+    "modified": 1769422925
 }

@@ -1,8 +1,8 @@
 <!-- footer -->
 <footer id="footer" class="footer_main section_spacing_top_small darkgreen">
     <div class="container">
-        <div class="row align-items-start justify-content-between">
-            <div class="col-12 col-md-6 col-xl-5">
+        <div class="row justify-content-between">
+            <div class="col-md-8 col-lg-6 col-xl-5">
                 <div class="logo_footer margin_2">
                     <a href="<?php echo home_url() ?>" aria-label="Home page">
                         <!-- <h2 class="colored_light_green_part">Sample site logo</h2> -->
@@ -71,7 +71,7 @@
                 </div>
             </div>
 
-            <div class="col-md-12 col-xl-6">
+            <div class="col-lg-6">
                 <div class="row align-items-start">
                     <div class="col">
                         <div class="contact_form margin_2">
@@ -86,8 +86,8 @@
             </div>
         </div>
 
-        <div class="row align-items-start">
-            <div class="col-md-12 col-xl-6">
+        <div class="row">
+            <div class="col">
                 <?php $footer_extra_info = get_field('footer_extra_info', 'option');
                 if ($footer_extra_info) { ?>
                     <p class="footer_extra_info">
@@ -114,6 +114,25 @@
                 </ul>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col">
+                <ul class="footer_links">
+                    <?php
+                    //repeater field
+                    if (have_rows('footer_links', 'option')) {
+                        while (have_rows('footer_links', 'option')) {
+                            the_row(); ?>
+                            <?php $link = get_sub_field('link'); ?>
+                            <li>
+                                <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class=""><?php echo $link['title']; ?> </a>
+                            </li>
+
+                    <?php }
+                    } ?>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div class="footer_copy">
@@ -135,7 +154,6 @@
 
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -143,5 +161,4 @@
 
 <?php wp_footer(); ?>
 </body>
-
 </html>
