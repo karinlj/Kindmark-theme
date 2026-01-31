@@ -4,13 +4,18 @@
         <div class="row justify-content-between">
             <div class="col-md-8 col-lg-6 col-xl-5">
                 <div class="logo_footer margin_2">
-                    <a href="<?php echo home_url() ?>" aria-label="Home page">
-                        <!-- <h2 class="colored_light_green_part">Sample site logo</h2> -->
-                        <img
-                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_circle__small.png"
-                            width="100" height="auto" alt="Kindmarks logo" />
-                        <!-- <img class="logo_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse.png" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse@2x.png 325w" width="208" height="51" alt="Boozang home page" /> -->
-                    </a>
+                    <?php
+                    $footer_logo_img_id = get_field('footer_logo', 'option');
+                    if ($footer_logo_img_id) { ?>
+                        <?php
+                        $image = wp_get_attachment_image_src($footer_logo_img_id, 'full');
+                        $alt_text = get_post_meta($footer_logo_img_id, '_wp_attachment_image_alt', true); ?>
+
+                        <a href="<?php echo home_url() ?>" aria-label="Home page">
+                            <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?> width=" 100" height="auto">
+                        </a>
+                    <?php
+                    } ?>
                 </div>
 
                 <?php $footer_heading = get_field('footer_heading', 'option');
@@ -149,7 +154,7 @@
                 <div class="col-2">
                     <div class="back_to_top_link">
                         <a href="#header_top" aria-label="To top of page">
-                            <i class="fas fa-angle-up" aria-hidden="true" aria-label="Toppen av sidan" title="To top of page"></i>
+                            <i class="fas fa-angle-up" aria-hidden="true" aria-label="Toppen av sidan" title="Toppen av sidan"></i>
                         </a>
 
                     </div>
@@ -161,4 +166,5 @@
 
 <?php wp_footer(); ?>
 </body>
+
 </html>

@@ -20,12 +20,14 @@
 
     if (is_home() || is_archive()) {
         $page_domain = get_option('page_for_posts');
-    }
+    } 
     $header_class = 'header_main';
     $style = '';
     // $row_class = 'justify-content-start';
     // $col_class = 'col-md-10';
     $bg_image = get_field('background_image', $page_domain);
+    $header_bg_image_default = get_field('header_bg_image_default', 'option');
+
     $overlay_color = '';
     $color = get_field('header_background', $page_domain);
     $header_heading = get_field('header_heading', $page_domain);
@@ -37,15 +39,17 @@
         $header_class = 'header_main front';
     }
     if (is_404()) {
-        $header_class = 'header_main not_found';
+        $header_class = 'header_main darkgreen';
     }
-    if (is_singular('post')) {
-        $header_class = 'header_main single_post';
-    }
+    // if (is_singular('post')) {
+    //     $header_class = 'header_main single_post';
+    // }
     if ($bg_image) {
         $style = 'style="background:url(\'' . wp_get_attachment_url($bg_image, 'full') . '\') no-repeat center; background-size: cover"';
         $overlay_color = get_field('overlay_color', $page_domain);
-    }  ?>
+    } else if ($header_bg_image_default) {
+        $style = 'style="background:url(\'' . wp_get_attachment_url($header_bg_image_default, 'full') . '\')no-repeat center; background-size: cover"';
+    } ?>
     <header id="header_top" class="<?php echo $header_class; ?> <?php echo $color; ?> <?php echo $overlay_color; ?>"
         <?php echo $style; ?>>
 
@@ -56,7 +60,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10">
-                        
+
                         <!-- heading and text-->
                         <div class="header_items_text">
                             <?php

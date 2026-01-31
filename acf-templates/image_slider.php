@@ -47,8 +47,7 @@
 
                                     <img class="big_img_item"
                                         src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                        <?php
-                                }
+                        <?php    }
                             }
                         } ?>
                     </div>
