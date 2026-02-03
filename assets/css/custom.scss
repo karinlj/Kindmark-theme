@@ -131,11 +131,7 @@ img {
   padding/ margin sections
 *********************/
 .container {
-  max-width: 1170px;
-  width: 100%;
-  position: relative;
-  // max-width: 100%;
-  // width: 1450px; //XXX
+   position: relative;
 }
 .section_spacing_top_medium {
   padding: 4rem calc(1.5rem - 15px);
@@ -164,13 +160,13 @@ img {
 .section_spacing_top_mini {
   padding: 1.5rem calc(1.5rem - 15px);
   @media all and (min-width: $sm-min) {
-    padding: 1rem calc(2.25rem - 15px);
+    padding: 1.5rem calc(2.25rem - 15px);
   }
   @media all and (min-width: $md-min) {
-    padding: 1.8rem calc(3rem - 15px);
+    padding: 2rem calc(3rem - 15px);
   }
   @media all and (min-width: $xl-min) {
-    padding: 2rem calc(3.75rem - 15px);
+    padding: 2.5rem calc(3.75rem - 15px);
   }
 }
 .margin_2 {
@@ -564,15 +560,15 @@ h1 {
   }
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   @media all and (min-width: $sm-min) {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
   }
   // @media all and (min-width: $lg-min) {
   //   font-size: 2.2rem;
   // }
   @media all and (min-width: $xl-min) {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   &.smaller_size_text {
     font-size: 1.5rem;
@@ -582,15 +578,15 @@ h2 {
   }
 }
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   @media all and (min-width: $sm-min) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   @media all and (min-width: $lg-min) {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   @media all and (min-width: $xl-min) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   &.smaller_size_text {
     font-size: 1rem;
@@ -632,14 +628,8 @@ header,
 footer,
 .card_container {
   position: relative;
-  &.darkgray {
-    background: $darkGray;
-  }
   &.darkgreen {
     background: $themecolorGreenDark;
-  }
-  &.blue {
-    background: $blue;
   }
   &.lightgrey {
     background: $lightgrey;
@@ -653,10 +643,8 @@ footer,
   &.lighturqoise {
     background: $turqoiseLight;
   }
-
   //text and btn color for dark bg
-  &.darkgreen,
-  &.darkgray {
+  &.darkgreen {
     h1,
     h2,
     h3,
@@ -1451,8 +1439,11 @@ feature list
 .feature_list_section {
   .feature_list_item {
     display: flex;
-    padding-bottom: 2rem;
     padding: 0 1rem 2rem 0;
+        @media only screen and (min-width: $md-min) {
+            padding-bottom: 0.5rem;
+
+      }
   }
   .features_icon {
     padding-right: 0.8rem;
@@ -1649,7 +1640,7 @@ feature list
 //card layout for cards_template cards
 .cards_template {
   position: relative;
-  min-height: 800px;
+  min-height: 700px;
   //darkgreen bg on whole field
   &.darkgreen {
     .card_container {

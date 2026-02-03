@@ -1,7 +1,7 @@
 <?php
 // Image slider layout for Pages Block
 ?>
-<section class="two-columns-section image_slider section_spacing_top_small">
+<section class="two-columns-section image_slider section_spacing_top_mini">
     <div class="container">
 
         <?php

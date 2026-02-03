@@ -109,8 +109,6 @@ img {
   padding/ margin sections
 *********************/
 .container {
-  max-width: 1170px;
-  width: 100%;
   position: relative;
 }
 
@@ -157,17 +155,17 @@ img {
 }
 @media all and (min-width: 576px) {
   .section_spacing_top_mini {
-    padding: 1rem calc(2.25rem - 15px);
+    padding: 1.5rem calc(2.25rem - 15px);
   }
 }
 @media all and (min-width: 768px) {
   .section_spacing_top_mini {
-    padding: 1.8rem calc(3rem - 15px);
+    padding: 2rem calc(3rem - 15px);
   }
 }
 @media all and (min-width: 1200px) {
   .section_spacing_top_mini {
-    padding: 2rem calc(3.75rem - 15px);
+    padding: 2.5rem calc(3.75rem - 15px);
   }
 }
 
@@ -641,16 +639,16 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 @media all and (min-width: 576px) {
   h2 {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
   }
 }
 @media all and (min-width: 1200px) {
   h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 h2.smaller_size_text {
@@ -663,21 +661,21 @@ h2.smaller_size_text {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 @media all and (min-width: 576px) {
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 @media all and (min-width: 992px) {
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 @media all and (min-width: 1200px) {
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 h3.smaller_size_text {
@@ -735,23 +733,11 @@ footer,
 .card_container {
   position: relative;
 }
-section.darkgray,
-header.darkgray,
-footer.darkgray,
-.card_container.darkgray {
-  background: #131720;
-}
 section.darkgreen,
 header.darkgreen,
 footer.darkgreen,
 .card_container.darkgreen {
   background: #184e4a;
-}
-section.blue,
-header.blue,
-footer.blue,
-.card_container.blue {
-  background: #1368e7;
 }
 section.lightgrey,
 header.lightgrey,
@@ -785,15 +771,7 @@ section.darkgreen h5,
 section.darkgreen h6,
 section.darkgreen li,
 section.darkgreen span,
-section.darkgreen p, section.darkgray h1,
-section.darkgray h2,
-section.darkgray h3,
-section.darkgray h4,
-section.darkgray h5,
-section.darkgray h6,
-section.darkgray li,
-section.darkgray span,
-section.darkgray p,
+section.darkgreen p,
 header.darkgreen h1,
 header.darkgreen h2,
 header.darkgreen h3,
@@ -803,15 +781,6 @@ header.darkgreen h6,
 header.darkgreen li,
 header.darkgreen span,
 header.darkgreen p,
-header.darkgray h1,
-header.darkgray h2,
-header.darkgray h3,
-header.darkgray h4,
-header.darkgray h5,
-header.darkgray h6,
-header.darkgray li,
-header.darkgray span,
-header.darkgray p,
 footer.darkgreen h1,
 footer.darkgreen h2,
 footer.darkgreen h3,
@@ -821,15 +790,6 @@ footer.darkgreen h6,
 footer.darkgreen li,
 footer.darkgreen span,
 footer.darkgreen p,
-footer.darkgray h1,
-footer.darkgray h2,
-footer.darkgray h3,
-footer.darkgray h4,
-footer.darkgray h5,
-footer.darkgray h6,
-footer.darkgray li,
-footer.darkgray span,
-footer.darkgray p,
 .card_container.darkgreen h1,
 .card_container.darkgreen h2,
 .card_container.darkgreen h3,
@@ -838,34 +798,19 @@ footer.darkgray p,
 .card_container.darkgreen h6,
 .card_container.darkgreen li,
 .card_container.darkgreen span,
-.card_container.darkgreen p,
-.card_container.darkgray h1,
-.card_container.darkgray h2,
-.card_container.darkgray h3,
-.card_container.darkgray h4,
-.card_container.darkgray h5,
-.card_container.darkgray h6,
-.card_container.darkgray li,
-.card_container.darkgray span,
-.card_container.darkgray p {
+.card_container.darkgreen p {
   color: #fff;
 }
-section.darkgreen .underscore_link, section.darkgray .underscore_link,
+section.darkgreen .underscore_link,
 header.darkgreen .underscore_link,
-header.darkgray .underscore_link,
 footer.darkgreen .underscore_link,
-footer.darkgray .underscore_link,
-.card_container.darkgreen .underscore_link,
-.card_container.darkgray .underscore_link {
+.card_container.darkgreen .underscore_link {
   color: #d9fc83;
 }
-section.darkgreen .underscore_link:before, section.darkgray .underscore_link:before,
+section.darkgreen .underscore_link:before,
 header.darkgreen .underscore_link:before,
-header.darkgray .underscore_link:before,
 footer.darkgreen .underscore_link:before,
-footer.darkgray .underscore_link:before,
-.card_container.darkgreen .underscore_link:before,
-.card_container.darkgray .underscore_link:before {
+.card_container.darkgreen .underscore_link:before {
   background: #d9fc83;
 }
 section.white h1,
@@ -1698,8 +1643,12 @@ feature list
 *********************/
 .feature_list_section .feature_list_item {
   display: flex;
-  padding-bottom: 2rem;
   padding: 0 1rem 2rem 0;
+}
+@media only screen and (min-width: 768px) {
+  .feature_list_section .feature_list_item {
+    padding-bottom: 0.5rem;
+  }
 }
 .feature_list_section .features_icon {
   padding-right: 0.8rem;
@@ -1897,7 +1846,7 @@ feature list
 ***********************/
 .cards_template {
   position: relative;
-  min-height: 800px;
+  min-height: 700px;
 }
 .cards_template.darkgreen .card_container {
   border: 1px solid #fff;
