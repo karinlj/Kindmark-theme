@@ -1,23 +1,22 @@
 <!-- footer -->
 <footer id="footer" class="footer_main section_spacing_top_small darkgreen">
     <div class="container">
+        <div class="logo_footer margin_2">
+            <?php
+            $footer_logo_img_id = get_field('footer_logo', 'option');
+            if ($footer_logo_img_id) { ?>
+                <?php
+                $image = wp_get_attachment_image_src($footer_logo_img_id, 'full');
+                $alt_text = get_post_meta($footer_logo_img_id, '_wp_attachment_image_alt', true); ?>
+
+                <a href="<?php echo home_url() ?>" aria-label="Home page">
+                    <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?> width=" 100" height="auto">
+                </a>
+            <?php
+            } ?>
+        </div>
         <div class="row justify-content-between">
             <div class="col-md-8 col-lg-6 col-xl-5">
-                <div class="logo_footer margin_2">
-                    <?php
-                    $footer_logo_img_id = get_field('footer_logo', 'option');
-                    if ($footer_logo_img_id) { ?>
-                        <?php
-                        $image = wp_get_attachment_image_src($footer_logo_img_id, 'full');
-                        $alt_text = get_post_meta($footer_logo_img_id, '_wp_attachment_image_alt', true); ?>
-
-                        <a href="<?php echo home_url() ?>" aria-label="Home page">
-                            <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?> width=" 100" height="auto">
-                        </a>
-                    <?php
-                    } ?>
-                </div>
-
                 <?php $footer_heading = get_field('footer_heading', 'option');
                 if ($footer_heading) { ?>
                     <h2 class="footer_heading">
@@ -26,7 +25,6 @@
                 <?php   } ?>
 
                 <div class="customer_contact" id="contact_us">
-
                     <?php $telephone = get_field('telephone', 'option');
                     if ($telephone) { ?>
                         <div class="customer_contact_info">
@@ -77,16 +75,12 @@
             </div>
 
             <div class="col-lg-6">
-                <div class="row align-items-start">
-                    <div class="col">
-                        <div class="contact_form margin_2">
-                            <?php $text_editor = get_field('text_editor', 'option');
-                            if ($text_editor) { ?>
-                                <?php echo $text_editor; ?>
-                            <?php
-                            } ?>
-                        </div>
-                    </div>
+                <div class="contact_form margin_2">
+                    <?php $text_editor = get_field('text_editor', 'option');
+                    if ($text_editor) { ?>
+                        <?php echo $text_editor; ?>
+                    <?php
+                    } ?>
                 </div>
             </div>
         </div>
@@ -153,7 +147,7 @@
                 </div>
                 <div class="col-2">
                     <div class="back_to_top_link">
-                        <a href="#header_top" aria-label="To top of page">
+                        <a href="#header_top" aria-label="To top of page" class="btn_link green">
                             <i class="fas fa-angle-up" aria-hidden="true" aria-label="Toppen av sidan" title="Toppen av sidan"></i>
                         </a>
 

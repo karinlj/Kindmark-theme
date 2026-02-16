@@ -29,12 +29,14 @@ if (get_row_layout() == 'info_banner') { ?>
                         while (have_rows('banner_links')) {
                             the_row(); ?>
 
-                            <?php $link = get_sub_field('link');?>
-                                <?php if ($link) { ?>
+                            <?php $link = get_sub_field('link'); ?>
+                            <?php if ($link) { ?>
+                                <p>
                                     <a class="underscore_link" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>" rel="noopener noreferrer"><?php echo esc_html($link['title']); ?>
                                     </a>
-                                <?php   } ?>
-                         
+                                </p>
+
+                            <?php   } ?>
                     <?php }
                     } ?>
                 </div>

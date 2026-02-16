@@ -131,7 +131,7 @@ img {
   padding/ margin sections
 *********************/
 .container {
-   position: relative;
+  position: relative;
 }
 .section_spacing_top_medium {
   padding: 4rem calc(1.5rem - 15px);
@@ -302,6 +302,17 @@ button,
       color: $themecolorGreen;
     }
   }
+  &.lightgreen {
+    background: $themecolorLightGreen;
+    color: $themecolor !important;
+    border: 1px solid $themecolorLightGreen;
+    border-color: $themecolorLightGreen;
+    box-shadow: $themeBox_shadow;
+    &:hover {
+      background: transparent;
+      color: #fff !important;
+    }
+  }
   &.blue {
     background: $blue;
     color: #fff;
@@ -332,10 +343,10 @@ button,
   }
   &.outline_color_lightgreen {
     border-color: $themecolorLightGreen;
-    color: $themecolorLightGreen;
+    color: #fff;
     background: transparent;
     &:hover {
-      color: $themecolorGreenDark;
+      color: $themecolor;
       background: $themecolorLightGreen;
     }
   }
@@ -359,7 +370,7 @@ a {
     color: $linkcolor;
   }
   &:hover {
-  opacity: 0.8;
+    opacity: 0.8;
     // text-decoration: none;
   }
   // &.moving_link {
@@ -407,10 +418,14 @@ a {
 }
 //white link with underscore on colored banner
 .underscore_link {
+  display: inline;
   color: #fff;
   font-weight: 500;
   font-size: 1.2rem;
   margin: 0.7rem 1rem 0.7rem 0;
+  @media all and (min-width: $sm-min) {
+    display: inline-block;
+  }
   @media all and (min-width: $xl-min) {
     font-size: 1.3rem;
   }
@@ -524,6 +539,9 @@ h6 {
   margin-top: 0.3rem;
   line-height: 1.3;
   word-wrap: break-word;
+  // @media all and (max-width: $xs-max) {
+  //   max-width: 350px;
+  // }
 }
 section {
   h3 {
@@ -722,8 +740,7 @@ main nav - default colors for white & lightgrey bg  ????
   width: 100%;
   height: 100px;
   border-bottom: 1px solid $themecolorLightest;
-  // background: transparent;
-  background: rgba(0, 0, 0, 0.225);
+  background: rgba(0, 0, 0, 0.3);
   padding: 0rem calc(1.5rem - 15px);
   @media all and (min-width: $sm-min) {
     padding: 0rem calc(2.25rem - 15px);
@@ -752,6 +769,7 @@ main nav - default colors for white & lightgrey bg  ????
   a:focus,
   a:hover {
     color: $navcolor;
+    opacity: 1;
   }
   ul {
     display: none;
@@ -771,12 +789,13 @@ main nav - default colors for white & lightgrey bg  ????
         margin: 0 1rem -1px 1rem;
         padding: 0.5rem 0.2rem;
         border-bottom: 1px solid transparent;
-        font-size: 13px;
+        font-size: 12px;
         color: $navcolor;
         font-weight: 600;
         letter-spacing: 0.6px;
-        @media all and (min-width: $md-min) {
-          font-size: 12px;
+
+        @media all and (min-width: $xl-min) {
+          font-size: 13px;
         }
         &:hover {
           color: $navcolor;
@@ -838,7 +857,8 @@ main nav - default colors for white & lightgrey bg  ????
       background-color: #fff;
       width: 14rem;
       padding-bottom: 3px;
-      margin-top: -1px;
+      padding: 0.5rem 0;
+      // margin-top: -3px;
       box-shadow: $themeBox_shadow;
       // display: none;
       opacity: 0;
@@ -848,13 +868,10 @@ main nav - default colors for white & lightgrey bg  ????
       flex-direction: column;
       &.sub-menu-open {
         opacity: 1;
-        // display: flex;
-        // flex-direction: column;
       }
       li {
         width: 100%;
         border-radius: 0;
-        border-bottom: 1px solid $turqoise;
         &:last-of-type {
           border-bottom: none;
         }
@@ -865,14 +882,13 @@ main nav - default colors for white & lightgrey bg  ????
           font-size: 13px;
           text-shadow: none;
           text-transform: capitalize;
-          padding: 8px 18px;
+          padding: 9px 18px;
           background: #fff;
           border-radius: 0;
           border-radius: $btnBorder_radius;
           margin: 0 1rem;
           &:hover {
-            background: #fff !important;
-            color: $themecolorGreen !important;
+            background: $themecolorLightGreen !important;
             border-color: transparent;
           }
         }
@@ -971,21 +987,24 @@ main nav - default colors for white & lightgrey bg  ????
   &:visited {
     color: #fff;
   }
+  @media all and (min-width: $xl-min) {
+    margin-right: 3rem;
+  }
   img {
     width: 7rem;
     height: auto;
-    @media all and (min-width: $sm-min) {
+    @media all and (max-width: $xxs-max) {
+      width: 8rem;
+    }
+
+    @media all and (min-width: $md-min) {
       width: 6rem;
     }
-    // @media all and (min-width: $md-min) {
-    //   width: 7rem;
+    // @media all and (min-width: $lg-min) {
+    //   width: 6rem;
     // }
-    @media all and (min-width: $lg-min) {
-      width: 6rem;
-    }
     @media all and (min-width: $xl-min) {
-      width: 5.5rem;
-      margin-right: 3rem;
+      width: 6.5rem;
     }
   }
 }
@@ -1009,8 +1028,11 @@ main nav - default colors for white & lightgrey bg  ????
     justify-content: flex-end;
   }
   .btn_link {
-    padding: 12px 22px;
+    padding: 10px 18px;
     text-shadow: none;
+    @media all and (min-width: $md-min) {
+      padding: 12px 22px;
+    }
   }
 }
 /*Mobile view - menu*/
@@ -1119,9 +1141,6 @@ main nav - default colors for white & lightgrey bg  ????
 .header_main {
   // background: #fff; //default bg
   min-height: 400px;
-  // padding-bottom: 4rem;
-  // margin-bottom: 3rem;
-  // padding-bottom: 2rem;
   @media all and (min-width: $xl-min) {
     min-height: 500px;
   }
@@ -1141,11 +1160,9 @@ main nav - default colors for white & lightgrey bg  ????
     }
   }
   .btn_link {
-    &.green,
-    &.outline_color_white {
-      color: #fff;
+    &.outline_color_lightgreen {
       &:hover {
-        color: $themecolorGreen;
+        color: $themecolor;
       }
     }
   }
@@ -1163,26 +1180,11 @@ main nav - default colors for white & lightgrey bg  ????
     // max-width: 90%;
   }
   .header_heading {
-    word-wrap: break-word;
-    // -moz-hyphens: auto;
-    // -webkit-hyphens: auto;
-    // -o-hyphens: auto;
-    // hyphens: auto;
-    // word-wrap: break-word;
     margin-bottom: 1.6rem;
     @media all and (min-width: $xl-min) {
       font-size: 4rem;
     }
   }
-  // .header_text {
-  //   @media all and (min-width: $sm-min) {
-  //     font-size: 1.1rem;
-  //     line-height: 1.6;
-  //   }
-  //   @media all and (min-width: $xl-min) {
-  //     font-size: 1.3rem;
-  //   }
-  // }
   &.front {
     min-height: 600px;
     @media all and (min-width: $xl-min) {
@@ -1213,20 +1215,26 @@ main nav - default colors for white & lightgrey bg  ????
       a:hover {
         color: #fff;
       }
+      :active {
+        color: #fff;
+        &:visited {
+          color: #fff;
+        }
+      }
       ul {
         li {
           a {
-            color: #fff;
+            // color: #fff;
             &:hover {
-              color: #fff;
+              // color: #fff;
               border-bottom: 1px solid #fff;
             }
-            &:active {
-              color: #fff;
-              &:visited {
-                color: #fff;
-              }
-            }
+            // &:active {
+            //   color: #fff;
+            //   &:visited {
+            //     color: #fff;
+            //   }
+            // }
           }
         }
       }
@@ -1440,10 +1448,9 @@ feature list
   .feature_list_item {
     display: flex;
     padding: 0 1rem 2rem 0;
-        @media only screen and (min-width: $md-min) {
-            padding-bottom: 0.5rem;
-
-      }
+    @media only screen and (min-width: $md-min) {
+      padding-bottom: 0.5rem;
+    }
   }
   .features_icon {
     padding-right: 0.8rem;
@@ -1471,11 +1478,11 @@ feature list
   .icon_section {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -12px;
+    // margin: 0 -12px;
   }
   .img_box {
-    width: 7rem;
-    padding: 0 1rem 1rem 0;
+    width: 13rem;
+    padding: 0 3rem 1rem 0;
     span {
       border-radius: $btnBorder_radius;
       display: flex;
@@ -1851,10 +1858,10 @@ text content field
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 4rem;
-  @media all and (min-width: $md-min) {
-    padding-top: 6rem;
-  }
+  padding-top: 3rem;
+  // @media all and (min-width: $md-min) {
+  //   padding-top: 3rem;
+  // }
   > .container {
     margin-bottom: 1rem;
     // width: 100%;
@@ -1886,16 +1893,18 @@ text content field
     }
     a {
       margin-right: 0.5rem;
-         font-size: 1.1rem;
-      @media all and (max-width: $xxs-max) {
-      font-size: 0.95rem;
+      font-size: 1.1rem;
+      @media all and (max-width: $xs-max) {
+        font-size: 1rem;
+      }
+      @media all and (max-width: $xxxs-max) {
+        font-size: 0.9rem;
       }
     }
     .contact_icon {
       margin-right: 0.5rem;
     }
   }
-
   .underscore_link {
     font-size: 1.1rem;
   }
@@ -1924,7 +1933,6 @@ text content field
       }
     }
   }
-
   .badges {
     display: flex;
     flex-wrap: wrap;
@@ -1942,7 +1950,6 @@ text content field
       }
     }
   }
-
   .footer_links {
     display: flex;
     flex-wrap: wrap;
@@ -1956,7 +1963,6 @@ text content field
       }
     }
   }
-
   .footer_copy {
     padding-top: 1rem;
     border-top: 1px solid $themecolorLight;
@@ -1972,19 +1978,12 @@ text content field
   .back_to_top_link {
     float: right;
     margin-top: 1rem;
-    background: $themecolorGreen;
-    border-radius: $btnBorder_radius;
-    padding: 6px;
     height: 1.9rem;
     display: flex;
     align-items: center;
     font-size: 1.6rem;
-    transition: all 0.3s ease;
-    a {
-      color: #fff;
-    }
-    &:hover {
-      transform: translateY(-2px);
+    .btn_link {
+      padding: 8px 16px;
     }
   }
 }
@@ -2046,6 +2045,11 @@ contact_form_block
     transition: 1s;
     line-height: 20px;
     border-radius: $btnBorder_radius;
+    cursor: pointer;
+    &:hover {
+      background: #fff;
+      color: $themecolorGreen;
+    }
   }
 
   iframe {
@@ -2055,6 +2059,31 @@ contact_form_block
       width: 350px;
       height: 350px;
     }
+  }
+
+  //response messages
+  .wpcf7 form .wpcf7-response-output {
+    color: #fff;
+    border-radius: $btnBorder_radius;
+    margin-left: 0;
+    padding: 0.5rem 1rem;
+    border-width: 1px;
+    font-size: 90%;
+  }
+
+  .wpcf7 form.sent .wpcf7-response-output {
+    border-color: $themecolorGreen;
+  }
+  .wpcf7 form.failed .wpcf7-response-output,
+  .wpcf7 form.aborted .wpcf7-response-output {
+    border-color: #da5353; /* Red */
+  }
+  .wpcf7 form.spam .wpcf7-response-output {
+    border-color: orange;
+  }
+  .wpcf7 form.invalid .wpcf7-response-output,
+  .wpcf7 form.unaccepted .wpcf7-response-output {
+    border-color: gold;
   }
 }
 /******************************

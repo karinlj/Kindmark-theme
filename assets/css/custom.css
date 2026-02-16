@@ -353,6 +353,21 @@ button.green:hover,
   background: #fff;
   color: #00a87b;
 }
+button.lightgreen,
+.btn.lightgreen,
+.btn_link.lightgreen {
+  background: #d9fc83;
+  color: #212735 !important;
+  border: 1px solid #d9fc83;
+  border-color: #d9fc83;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+button.lightgreen:hover,
+.btn.lightgreen:hover,
+.btn_link.lightgreen:hover {
+  background: transparent;
+  color: #fff !important;
+}
 button.blue,
 .btn.blue,
 .btn_link.blue {
@@ -397,13 +412,13 @@ button.outline_color_lightgreen,
 .btn.outline_color_lightgreen,
 .btn_link.outline_color_lightgreen {
   border-color: #d9fc83;
-  color: #d9fc83;
+  color: #fff;
   background: transparent;
 }
 button.outline_color_lightgreen:hover,
 .btn.outline_color_lightgreen:hover,
 .btn_link.outline_color_lightgreen:hover {
-  color: #184e4a;
+  color: #212735;
   background: #d9fc83;
 }
 
@@ -465,10 +480,16 @@ a:focus {
 }
 
 .underscore_link {
+  display: inline;
   color: #fff;
   font-weight: 500;
   font-size: 1.2rem;
   margin: 0.7rem 1rem 0.7rem 0;
+}
+@media all and (min-width: 576px) {
+  .underscore_link {
+    display: inline-block;
+  }
 }
 @media all and (min-width: 1200px) {
   .underscore_link {
@@ -964,7 +985,7 @@ main nav - default colors for white & lightgrey bg  ????
   width: 100%;
   height: 100px;
   border-bottom: 1px solid #a6b0bf;
-  background: rgba(0, 0, 0, 0.225);
+  background: rgba(0, 0, 0, 0.3);
   padding: 0rem calc(1.5rem - 15px);
 }
 @media all and (min-width: 576px) {
@@ -1004,6 +1025,7 @@ main nav - default colors for white & lightgrey bg  ????
 .main_menu a:focus,
 .main_menu a:hover {
   color: #212735;
+  opacity: 1;
 }
 .main_menu ul {
   display: none;
@@ -1026,14 +1048,14 @@ main nav - default colors for white & lightgrey bg  ????
   margin: 0 1rem -1px 1rem;
   padding: 0.5rem 0.2rem;
   border-bottom: 1px solid transparent;
-  font-size: 13px;
+  font-size: 12px;
   color: #212735;
   font-weight: 600;
   letter-spacing: 0.6px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 1200px) {
   .main_menu ul li a {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 .main_menu ul li a:hover {
@@ -1077,7 +1099,7 @@ main nav - default colors for white & lightgrey bg  ????
   background-color: #fff;
   width: 14rem;
   padding-bottom: 3px;
-  margin-top: -1px;
+  padding: 0.5rem 0;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   opacity: 0;
   border-radius: 10px;
@@ -1091,7 +1113,6 @@ main nav - default colors for white & lightgrey bg  ????
 .main_menu li.menu-item-has-children ul li {
   width: 100%;
   border-radius: 0;
-  border-bottom: 1px solid #b8e0d7;
 }
 .main_menu li.menu-item-has-children ul li:last-of-type {
   border-bottom: none;
@@ -1103,15 +1124,14 @@ main nav - default colors for white & lightgrey bg  ????
   font-size: 13px;
   text-shadow: none;
   text-transform: capitalize;
-  padding: 8px 18px;
+  padding: 9px 18px;
   background: #fff;
   border-radius: 0;
   border-radius: 10px;
   margin: 0 1rem;
 }
 .main_menu li.menu-item-has-children ul li a:hover {
-  background: #fff !important;
-  color: #00a87b !important;
+  background: #d9fc83 !important;
   border-color: transparent;
 }
 .main_menu > .menu_toggle_btn {
@@ -1201,24 +1221,28 @@ main nav - default colors for white & lightgrey bg  ????
 .logo_header:visited {
   color: #fff;
 }
+@media all and (min-width: 1200px) {
+  .logo_header {
+    margin-right: 3rem;
+  }
+}
 .logo_header img {
   width: 7rem;
   height: auto;
 }
-@media all and (min-width: 576px) {
+@media all and (max-width: 410px) {
   .logo_header img {
-    width: 6rem;
+    width: 8rem;
   }
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 768px) {
   .logo_header img {
     width: 6rem;
   }
 }
 @media all and (min-width: 1200px) {
   .logo_header img {
-    width: 5.5rem;
-    margin-right: 3rem;
+    width: 6.5rem;
   }
 }
 
@@ -1250,8 +1274,13 @@ main nav - default colors for white & lightgrey bg  ????
   }
 }
 .signup .btn_link {
-  padding: 12px 22px;
+  padding: 10px 18px;
   text-shadow: none;
+}
+@media all and (min-width: 768px) {
+  .signup .btn_link {
+    padding: 12px 22px;
+  }
 }
 
 /*Mobile view - menu*/
@@ -1375,11 +1404,8 @@ main nav - default colors for white & lightgrey bg  ????
     padding-bottom: 0;
   }
 }
-.header_main .btn_link.green, .header_main .btn_link.outline_color_white {
-  color: #fff;
-}
-.header_main .btn_link.green:hover, .header_main .btn_link.outline_color_white:hover {
-  color: #00a87b;
+.header_main .btn_link.outline_color_lightgreen:hover {
+  color: #212735;
 }
 .header_main .header_items_section {
   min-height: 300px;
@@ -1394,7 +1420,6 @@ main nav - default colors for white & lightgrey bg  ????
   }
 }
 .header_main .header_heading {
-  word-wrap: break-word;
   margin-bottom: 1.6rem;
 }
 @media all and (min-width: 1200px) {
@@ -1435,18 +1460,14 @@ main nav - default colors for white & lightgrey bg  ????
 .header_main.darkgreen nav a:hover {
   color: #fff;
 }
-.header_main.darkgreen nav ul li a {
+.header_main.darkgreen nav :active {
+  color: #fff;
+}
+.header_main.darkgreen nav :active:visited {
   color: #fff;
 }
 .header_main.darkgreen nav ul li a:hover {
-  color: #fff;
   border-bottom: 1px solid #fff;
-}
-.header_main.darkgreen nav ul li a:active {
-  color: #fff;
-}
-.header_main.darkgreen nav ul li a:active:visited {
-  color: #fff;
 }
 .header_main.darkgreen nav a:not([href]):not([tabindex]) {
   color: #fff;
@@ -1674,11 +1695,10 @@ feature list
 .integrations_section .icon_section {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -12px;
 }
 .integrations_section .img_box {
-  width: 7rem;
-  padding: 0 1rem 1rem 0;
+  width: 13rem;
+  padding: 0 3rem 1rem 0;
 }
 .integrations_section .img_box span {
   border-radius: 10px;
@@ -2062,12 +2082,7 @@ text content field
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 4rem;
-}
-@media all and (min-width: 768px) {
-  .footer_main {
-    padding-top: 6rem;
-  }
+  padding-top: 3rem;
 }
 .footer_main > .container {
   margin-bottom: 1rem;
@@ -2104,9 +2119,14 @@ text content field
   margin-right: 0.5rem;
   font-size: 1.1rem;
 }
-@media all and (max-width: 410px) {
+@media all and (max-width: 480px) {
   .footer_main .customer_contact a {
-    font-size: 0.95rem;
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 380px) {
+  .footer_main .customer_contact a {
+    font-size: 0.9rem;
   }
 }
 .footer_main .customer_contact .contact_icon {
@@ -2189,20 +2209,13 @@ text content field
 .footer_main .back_to_top_link {
   float: right;
   margin-top: 1rem;
-  background: #00a87b;
-  border-radius: 10px;
-  padding: 6px;
   height: 1.9rem;
   display: flex;
   align-items: center;
   font-size: 1.6rem;
-  transition: all 0.3s ease;
 }
-.footer_main .back_to_top_link a {
-  color: #fff;
-}
-.footer_main .back_to_top_link:hover {
-  transform: translateY(-2px);
+.footer_main .back_to_top_link .btn_link {
+  padding: 8px 16px;
 }
 
 /**********************
@@ -2261,6 +2274,11 @@ contact_form_block
   transition: 1s;
   line-height: 20px;
   border-radius: 10px;
+  cursor: pointer;
+}
+.contact_form input[type=submit]:hover {
+  background: #fff;
+  color: #00a87b;
 }
 .contact_form iframe {
   width: 250px;
@@ -2271,6 +2289,29 @@ contact_form_block
     width: 350px;
     height: 350px;
   }
+}
+.contact_form .wpcf7 form .wpcf7-response-output {
+  color: #fff;
+  border-radius: 10px;
+  margin-left: 0;
+  padding: 0.5rem 1rem;
+  border-width: 1px;
+  font-size: 90%;
+}
+.contact_form .wpcf7 form.sent .wpcf7-response-output {
+  border-color: #00a87b;
+}
+.contact_form .wpcf7 form.failed .wpcf7-response-output,
+.contact_form .wpcf7 form.aborted .wpcf7-response-output {
+  border-color: #da5353;
+  /* Red */
+}
+.contact_form .wpcf7 form.spam .wpcf7-response-output {
+  border-color: orange;
+}
+.contact_form .wpcf7 form.invalid .wpcf7-response-output,
+.contact_form .wpcf7 form.unaccepted .wpcf7-response-output {
+  border-color: gold;
 }
 
 /******************************
