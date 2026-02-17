@@ -996,15 +996,8 @@ main nav - default colors for white & lightgrey bg  ????
     @media all and (max-width: $xxs-max) {
       width: 8rem;
     }
-
     @media all and (min-width: $md-min) {
       width: 6rem;
-    }
-    // @media all and (min-width: $lg-min) {
-    //   width: 6rem;
-    // }
-    @media all and (min-width: $xl-min) {
-      width: 6.5rem;
     }
   }
 }
@@ -1859,12 +1852,8 @@ text content field
   flex-direction: column;
   justify-content: space-between;
   padding-top: 3rem;
-  // @media all and (min-width: $md-min) {
-  //   padding-top: 3rem;
-  // }
   > .container {
     margin-bottom: 1rem;
-    // width: 100%;
   }
   .logo_footer {
     img {
@@ -1891,22 +1880,22 @@ text content field
     .customer_contact_info {
       margin: 1.5rem 0;
     }
-    a {
-      margin-right: 0.5rem;
-      font-size: 1.1rem;
-      @media all and (max-width: $xs-max) {
-        font-size: 1rem;
-      }
-      @media all and (max-width: $xxxs-max) {
-        font-size: 0.9rem;
-      }
-    }
     .contact_icon {
       margin-right: 0.5rem;
     }
   }
   .underscore_link {
+    margin-right: 0.5rem;
     font-size: 1.1rem;
+    @media all and (max-width: $xs-max) {
+      font-size: 1rem;
+    }
+    @media all and (max-width: $xxxs-max) {
+      font-size: 0.9rem;
+    }
+    @media only screen and (min-width: $xl-min) {
+      font-size: 1.2rem;
+    }
   }
   .social_icons {
     padding: 0.5rem 0 2rem 0;

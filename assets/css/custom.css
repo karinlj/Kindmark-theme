@@ -1240,11 +1240,6 @@ main nav - default colors for white & lightgrey bg  ????
     width: 6rem;
   }
 }
-@media all and (min-width: 1200px) {
-  .logo_header img {
-    width: 6.5rem;
-  }
-}
 
 .nav_links {
   display: flex;
@@ -2115,25 +2110,27 @@ text content field
 .footer_main .customer_contact .customer_contact_info {
   margin: 1.5rem 0;
 }
-.footer_main .customer_contact a {
-  margin-right: 0.5rem;
-  font-size: 1.1rem;
-}
-@media all and (max-width: 480px) {
-  .footer_main .customer_contact a {
-    font-size: 1rem;
-  }
-}
-@media all and (max-width: 380px) {
-  .footer_main .customer_contact a {
-    font-size: 0.9rem;
-  }
-}
 .footer_main .customer_contact .contact_icon {
   margin-right: 0.5rem;
 }
 .footer_main .underscore_link {
+  margin-right: 0.5rem;
   font-size: 1.1rem;
+}
+@media all and (max-width: 480px) {
+  .footer_main .underscore_link {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 380px) {
+  .footer_main .underscore_link {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer_main .underscore_link {
+    font-size: 1.2rem;
+  }
 }
 .footer_main .social_icons {
   padding: 0.5rem 0 2rem 0;
