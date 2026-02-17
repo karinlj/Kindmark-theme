@@ -8,15 +8,21 @@ if (get_row_layout() == 'text_or_image_field') {
     $color = get_sub_field('background_color');
     $column_class = 'big_image';
     $padding_class = 'section_spacing_top_small';
+    $column_row_class = 'column_row';
     $shadow_class = '';
 
     $big_or_small_image = get_sub_field('big_or_small_image');
     $narrow_field =  get_sub_field('narrow_field');
+    $centered_text =  get_sub_field('centered_text');
     $box_shadow_on_image = get_sub_field('box_shadow_on_image');
 
     if ($narrow_field == 'true') {
         $padding_class = 'section_spacing_top_mini';
     }
+    if ($centered_text == 'true') {
+        $column_row_class = 'column_row center';
+    }
+
     if ($big_or_small_image == 'small_image') {
         $column_class = 'small_image';
     }
@@ -27,7 +33,7 @@ if (get_row_layout() == 'text_or_image_field') {
 ?>
     <section class="two_columns_section <?php echo $column_class; ?> <?php echo $color; ?> <?php echo $padding_class; ?>">
         <div class="container">
-            <section class="column_row ">
+            <section class="<?php echo $column_row_class; ?>">
                 <!-- loopa flex content -->
                 <?php if (have_rows('two_columns')) {
                     while (have_rows('two_columns')) {

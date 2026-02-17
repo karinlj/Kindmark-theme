@@ -1,7 +1,7 @@
 <!-- footer -->
 <footer id="footer" class="footer_main section_spacing_top_small darkgreen">
     <div class="container">
-        <div class="logo_footer margin_2">
+        <div class="logo_footer">
             <?php
             $footer_logo_img_id = get_field('footer_logo', 'option');
             if ($footer_logo_img_id) { ?>

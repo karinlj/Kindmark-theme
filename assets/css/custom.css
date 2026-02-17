@@ -1513,9 +1513,8 @@ text_or_image_field
   min-height: 300px;
 }
 .two_columns_section .column_row {
-  padding-bottom: 4rem;
   display: flex;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
 }
 @media all and (min-width: 768px) {
@@ -1523,10 +1522,8 @@ text_or_image_field
     flex-direction: row;
   }
 }
-@media all and (min-width: 992px) {
-  .two_columns_section .column_row {
-    padding-bottom: 7rem;
-  }
+.two_columns_section .column_row.center {
+  align-items: center;
 }
 .two_columns_section ul {
   list-style: disc;
@@ -1593,11 +1590,6 @@ text_or_image_field
   font-style: italic;
   margin-top: 4px;
 }
-.two_columns_section.big_image .column_row, .two_columns_section.small_image .column_row {
-  justify-content: space-between;
-  align-items: start;
-  padding-bottom: 0;
-}
 .two_columns_section.big_image .box_shadow_off img, .two_columns_section.small_image .box_shadow_off img {
   box-shadow: none;
 }
@@ -1612,7 +1604,7 @@ text_or_image_field
 }
 @media all and (min-width: 768px) {
   .two_columns_section.small_image .part.text {
-    width: 70%;
+    width: 65%;
   }
 }
 .two_columns_section.small_image .part.image {
@@ -1620,7 +1612,7 @@ text_or_image_field
 }
 @media all and (min-width: 768px) {
   .two_columns_section.small_image .part.image {
-    width: 30%;
+    width: 35%;
   }
 }
 
@@ -2081,6 +2073,9 @@ text content field
 }
 .footer_main > .container {
   margin-bottom: 1rem;
+}
+.footer_main .logo_footer {
+  margin-bottom: 1.2rem;
 }
 .footer_main .logo_footer img {
   width: 80px;

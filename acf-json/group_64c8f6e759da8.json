@@ -129,6 +129,32 @@
                             "save_other_choice": 0
                         },
                         {
+                            "key": "field_6994c61efe489",
+                            "label": "Centered text",
+                            "name": "centered_text",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "true": "Yes",
+                                "false": "No"
+                            },
+                            "default_value": "false",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "allow_in_bindings": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
                             "key": "field_68246b0643bf2",
                             "label": "Two columns",
                             "name": "two_columns",
@@ -336,7 +362,6 @@
                     "min": "",
                     "max": ""
                 },
-   
                 "5b45164e15d0d": {
                     "key": "5b45164e15d0d",
                     "name": "feature_blocks",
@@ -793,5 +818,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1767983677
+    "modified": 1771357757
 }

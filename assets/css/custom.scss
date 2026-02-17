@@ -1298,15 +1298,18 @@ text_or_image_field
 .two_columns_section {
   min-height: 300px;
   .column_row {
-    padding-bottom: 4rem;
+    // padding-bottom: 4rem;
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
     @media all and (min-width: $md-min) {
       flex-direction: row;
     }
-    @media all and (min-width: $lg-min) {
-      padding-bottom: 7rem;
+    // @media all and (min-width: $lg-min) {
+    //   padding-bottom: 7rem;
+    // }
+    &.center {
+      align-items: center;
     }
   }
   ul {
@@ -1369,11 +1372,11 @@ text_or_image_field
   }
   &.big_image,
   &.small_image {
-    .column_row {
-      justify-content: space-between;
-      align-items: start;
-      padding-bottom: 0;
-    }
+    // .column_row {
+    //   justify-content: space-between;
+    //   // align-items: start;
+    //   padding-bottom: 0;
+    // }
     .box_shadow_off {
       img {
         box-shadow: none;
@@ -1394,13 +1397,13 @@ text_or_image_field
       &.text {
         width: 100%;
         @media all and (min-width: $md-min) {
-          width: 70%;
+          width: 65%;
         }
       }
       &.image {
         width: 100%;
         @media all and (min-width: $md-min) {
-          width: 30%;
+          width: 35%;
         }
       }
     }
@@ -1856,6 +1859,7 @@ text content field
     margin-bottom: 1rem;
   }
   .logo_footer {
+    margin-bottom: 1.2rem;
     img {
       width: 80px;
       height: auto;
