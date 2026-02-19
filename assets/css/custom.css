@@ -1237,7 +1237,7 @@ main nav - default colors for white & lightgrey bg  ????
 }
 @media all and (min-width: 768px) {
   .logo_header img {
-    width: 6rem;
+    width: 18rem;
   }
 }
 
@@ -1684,8 +1684,14 @@ feature list
   flex-wrap: wrap;
 }
 .integrations_section .img_box {
-  width: 13rem;
-  padding: 0 3rem 1rem 0;
+  width: 10rem;
+  padding: 0 3rem 2rem 0;
+}
+@media all and (min-width: 992px) {
+  .integrations_section .img_box {
+    width: 13rem;
+    padding: 0 4rem 1rem 0;
+  }
 }
 .integrations_section .img_box span {
   border-radius: 10px;
@@ -2160,13 +2166,18 @@ text content field
   border-radius: 10px;
   padding: 1rem 1rem 1rem 0;
 }
+@media only screen and (min-width: 992px) {
+  .footer_main .badges .badge_item {
+    padding: 1rem 2rem 1rem 0;
+  }
+}
 .footer_main .badges .badge_item img {
   border-radius: 10px;
-  max-width: 100px;
+  max-width: 90px;
 }
 @media all and (min-width: 1600px) {
   .footer_main .badges .badge_item img {
-    max-width: 120px;
+    max-width: 110px;
   }
 }
 .footer_main .footer_links {
@@ -2213,6 +2224,14 @@ text content field
 /**********************
 contact_form_block
 ***********************/
+.contact_form {
+  margin-bottom: 3rem;
+}
+@media only screen and (min-width: 992px) {
+  .contact_form {
+    margin-bottom: 1rem;
+  }
+}
 .contact_form div.wpcf7 {
   max-width: 100%;
 }

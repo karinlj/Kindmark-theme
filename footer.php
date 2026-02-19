@@ -75,7 +75,7 @@
             </div>
 
             <div class="col-lg-6">
-                <div class="contact_form margin_2">
+                <div class="contact_form">
                     <?php $text_editor = get_field('text_editor', 'option');
                     if ($text_editor) { ?>
                         <?php echo $text_editor; ?>
@@ -140,7 +140,7 @@
                 <div class="col-10">
 
                     <div class="copy">
-                        <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> <a href="http://localhost/Kindmarks/integritetspolicy/" target="_blank" rel="noopener noreferrer" aria-label="Integritetspolicy"><span class="color_lightgreen">Integritetspolicy</span></a></br>
+                        <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> <a href="/integritetspolicy/" target="_blank" rel="noopener noreferrer" aria-label="Integritetspolicy"><span class="color_lightgreen">Integritetspolicy</span></a></br>
                             Site & design av <a href="http://frilans.karinljunggren.com/" target="_blank" rel="noopener noreferrer" aria-label="Karin Ljunggren Home Page"><span class="color_lightgreen">Karin Ljunggren</span></a>
                         </p>
                     </div>

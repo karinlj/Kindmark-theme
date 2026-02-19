@@ -13,8 +13,11 @@ if (is_home() || is_archive()) {
                 <!-- <img
                             src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_ligg_white.png"
                             alt="Kindmarks logo" />  -->
-                <img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_circle__small.png"
+                <!-- <img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brandstamp_white.png"
+                    width="100" height="auto" alt="Kindmarks logo" /> -->
+                      <img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/kindmarks_logo_tagline.png"
                     width="100" height="auto" alt="Kindmarks logo" />
                 <!-- <span class="sample_site">Sample site</span> -->
             </a>

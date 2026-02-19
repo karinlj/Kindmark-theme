@@ -990,16 +990,29 @@ main nav - default colors for white & lightgrey bg  ????
   @media all and (min-width: $xl-min) {
     margin-right: 3rem;
   }
-  img {
+    img {
     width: 7rem;
     height: auto;
     @media all and (max-width: $xxs-max) {
       width: 8rem;
     }
-    @media all and (min-width: $md-min) {
-      width: 6rem;
+    // @media all and (min-width: $md-min) {
+    //   width: 5.5rem;
+    // }
+       @media all and (min-width: $md-min) {
+      width: 18rem;
     }
   }
+  // img {
+  //   width: 7rem;
+  //   height: auto;
+  //   @media all and (max-width: $xxs-max) {
+  //     width: 8rem;
+  //   }
+  //   @media all and (min-width: $md-min) {
+  //     width: 6rem;
+  //   }
+  // }
 }
 .nav_links {
   display: flex;
@@ -1477,8 +1490,11 @@ feature list
     // margin: 0 -12px;
   }
   .img_box {
-    width: 13rem;
-    padding: 0 3rem 1rem 0;
+    width: 10rem;
+    padding: 0 3rem 2rem 0;
+      @media all and (min-width: $lg-min) {
+         width: 13rem;
+    padding: 0 4rem 1rem 0;  }
     span {
       border-radius: $btnBorder_radius;
       display: flex;
@@ -1933,12 +1949,14 @@ text content field
     .badge_item {
       border-radius: $btnBorder_radius;
       padding: 1rem 1rem 1rem 0;
-
+         @media only screen and (min-width: $lg-min) {
+      padding: 1rem 2rem 1rem 0;
+    }
       img {
         border-radius: $btnBorder_radius;
-        max-width: 100px;
+        max-width: 90px;
         @media all and (min-width: 1600px) {
-          max-width: 120px;
+          max-width: 110px;
         }
       }
     }
@@ -1985,6 +2003,10 @@ text content field
 contact_form_block
 ***********************/
 .contact_form {
+  margin-bottom: 3rem;
+     @media only screen and (min-width: $lg-min) {
+     margin-bottom: 1rem;
+    }
   // Contact Form layout
   div.wpcf7 {
     max-width: 100%;

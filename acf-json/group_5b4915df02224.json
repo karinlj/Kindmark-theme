@@ -927,6 +927,13 @@
                 "operator": "==",
                 "value": "page.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
         ]
     ],
     "menu_order": 3,
@@ -941,5 +948,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1771356626
+    "modified": 1771500665
 }
