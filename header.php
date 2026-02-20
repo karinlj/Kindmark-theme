@@ -88,7 +88,7 @@
                                     $btn_color = get_sub_field('btn_color'); ?>
                                     <?php
                                     if ($link) { ?>
-                                        <a class="btn_link <?php echo $btn_color; ?>" href="<?php echo $link['url']; ?>"
+                                        <a class="btn_link green <?php echo $btn_color; ?>" href="<?php echo $link['url']; ?>"
                                             rel="noopener noreferrer"
                                             target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?>
                                         </a>
@@ -99,11 +99,15 @@
 
                             <?php if ($telephone_link) { ?>
                                 <div>
+                                    <a class="btn_link outline_color_white" href="tel:<?php echo $telephone_link; ?>"><?php echo $telephone_link; ?>
+                                    </a>
+                                </div>
+                                <!-- <div>
                                     <span class="email_icon colored_light_green_part"><i class="fa-solid fa-phone"></i>
                                     </span>
                                     <a class="underscore_link colored_light_green_part" href="tel:<?php echo $telephone_link; ?>"><?php echo $telephone_link; ?>
                                     </a>
-                                </div>
+                                </div> -->
                             <?php } ?>
                         </div>
                     </div>

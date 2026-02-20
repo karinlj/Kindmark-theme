@@ -1,20 +1,23 @@
 <!-- footer -->
 <footer id="footer" class="footer_main section_spacing_top_small darkgreen">
     <div class="container">
-        <div class="logo_footer">
-            <?php
-            $footer_logo_img_id = get_field('footer_logo', 'option');
-            if ($footer_logo_img_id) { ?>
+        <div class="row">
+        
+            <div class="logo_footer margin_2">
                 <?php
-                $image = wp_get_attachment_image_src($footer_logo_img_id, 'full');
-                $alt_text = get_post_meta($footer_logo_img_id, '_wp_attachment_image_alt', true); ?>
+                $footer_logo_img_id = get_field('footer_logo', 'option');
+                if ($footer_logo_img_id) { ?>
+                    <?php
+                    $image = wp_get_attachment_image_src($footer_logo_img_id, 'full');
+                    $alt_text = get_post_meta($footer_logo_img_id, '_wp_attachment_image_alt', true); ?>
 
-                <a href="<?php echo home_url() ?>" aria-label="Home page">
-                    <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?> width=" 100" height="auto">
-                </a>
-            <?php
-            } ?>
+                    <a href="<?php echo home_url() ?>" aria-label="Home page">
+                        <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?> width=" 100" height="auto">
+                    </a>
+                <?php
+                } ?>         
         </div>
+ </div>
         <div class="row justify-content-between">
             <div class="col-md-8 col-lg-6 col-xl-5">
                 <?php $footer_heading = get_field('footer_heading', 'option');

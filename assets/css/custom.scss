@@ -215,7 +215,7 @@ img {
   .btn_link {
     margin-top: 1rem;
     margin-right: 0.7rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     @media all and (min-width: $lg-min) {
       margin-right: 1.5rem;
       margin-bottom: 0;
@@ -238,6 +238,10 @@ button,
   background: $darkGray;
   color: #fff;
   border: 1px solid transparent;
+  text-align: center;
+  @media all and (min-width: $sm-min) {
+    text-align: left;
+  }
   @media all and (min-width: $md-min) {
     padding: 12px 22px;
   }
@@ -311,25 +315,6 @@ button,
     &:hover {
       background: transparent;
       color: #fff !important;
-    }
-  }
-  &.blue {
-    background: $blue;
-    color: #fff;
-    border: 1px solid $blue;
-    box-shadow: $themeBox_shadow;
-    &:hover {
-      background: transparent;
-      color: $blue;
-    }
-  }
-  &.outline_color_blue {
-    border-color: $blue;
-    color: $blue;
-    background: transparent;
-    &:hover {
-      color: #fff;
-      background: $blue;
     }
   }
   &.outline_color_green {
@@ -785,7 +770,7 @@ main nav - default colors for white & lightgrey bg  ????
       a {
         text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
         display: flex;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         margin: 0 1rem -1px 1rem;
         padding: 0.5rem 0.2rem;
         border-bottom: 1px solid transparent;
@@ -793,9 +778,8 @@ main nav - default colors for white & lightgrey bg  ????
         color: $navcolor;
         font-weight: 600;
         letter-spacing: 0.6px;
-
         @media all and (min-width: $xl-min) {
-          font-size: 13px;
+          font-size: 14px;
         }
         &:hover {
           color: $navcolor;
@@ -888,8 +872,10 @@ main nav - default colors for white & lightgrey bg  ????
           border-radius: $btnBorder_radius;
           margin: 0 1rem;
           &:hover {
-            background: $themecolorLightGreen !important;
+            color: $themecolorGreen !important;
+            // background: $themecolorLightGreen !important;
             border-color: transparent;
+            background: transparent !important;
           }
         }
       }
@@ -898,13 +884,11 @@ main nav - default colors for white & lightgrey bg  ????
   // menu btn
   > .menu_toggle_btn {
     // position: relative;
+    flex: 0 0 45px; /* flex-grow, flex-shrink, flex-basis */
+    height: 45px;
     top: 0.8rem;
     right: 0;
     z-index: 10000;
-    width: 65px;
-    height: 45px;
-    // width: 50px;
-    // height: 50px;
     padding: 0.5rem;
     background: transparent;
     border: none;
@@ -912,9 +896,6 @@ main nav - default colors for white & lightgrey bg  ????
     align-items: center;
     justify-content: center;
     box-shadow: none;
-    @media all and (min-width: $sm-min) {
-      width: 55px;
-    }
     /* Hamburger Line */
     > div {
       position: relative;
@@ -983,43 +964,26 @@ main nav - default colors for white & lightgrey bg  ????
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 1rem;
+  margin-top: -0.5rem;
+  flex: 0 0 210px; /* flex-grow, flex-shrink, flex-basis */
+  @media all and (min-width: $xl-min) {
+    flex-basis: 250px;
+  }
   &:visited {
     color: #fff;
   }
-  @media all and (min-width: $xl-min) {
-    margin-right: 3rem;
-  }
-    img {
-    width: 7rem;
+  img {
+    width: 100%;
     height: auto;
-    @media all and (max-width: $xxs-max) {
-      width: 8rem;
-    }
-    // @media all and (min-width: $md-min) {
-    //   width: 5.5rem;
-    // }
-       @media all and (min-width: $md-min) {
-      width: 18rem;
-    }
   }
-  // img {
-  //   width: 7rem;
-  //   height: auto;
-  //   @media all and (max-width: $xxs-max) {
-  //     width: 8rem;
-  //   }
-  //   @media all and (min-width: $md-min) {
-  //     width: 6rem;
-  //   }
-  // }
 }
 .nav_links {
   display: flex;
   flex-direction: column;
   width: 100%;
   @media all and (min-width: $md-min) {
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: flex-end;
     flex-direction: row;
     margin-left: 0.5rem;
   }
@@ -1032,6 +996,7 @@ main nav - default colors for white & lightgrey bg  ????
   justify-content: flex-start;
   @media all and (min-width: $lg-min) {
     justify-content: flex-end;
+    margin-left: 3rem;
   }
   .btn_link {
     padding: 10px 18px;
@@ -1166,9 +1131,9 @@ main nav - default colors for white & lightgrey bg  ????
     }
   }
   .btn_link {
-    &.outline_color_lightgreen {
+    &.green {
       &:hover {
-        color: $themecolor;
+        color: $themecolorGreenDarker;
       }
     }
   }
@@ -1487,14 +1452,18 @@ feature list
   .icon_section {
     display: flex;
     flex-wrap: wrap;
-    // margin: 0 -12px;
   }
   .img_box {
-    width: 10rem;
-    padding: 0 3rem 2rem 0;
-      @media all and (min-width: $lg-min) {
-         width: 13rem;
-    padding: 0 4rem 1rem 0;  }
+    width: 9rem;
+    padding: 0 1.5rem 2rem 0;
+    @media all and (min-width: $sm-min) {
+      width: 11rem;
+      padding: 0 3rem 1rem 0;
+    }
+    @media all and (min-width: $lg-min) {
+      width: 13rem;
+      padding: 0 4rem 1rem 0;
+    }
     span {
       border-radius: $btnBorder_radius;
       display: flex;
@@ -1875,16 +1844,14 @@ text content field
     margin-bottom: 1rem;
   }
   .logo_footer {
-    margin-bottom: 1.2rem;
+    margin-left: 1rem;
+    flex: 0 0 210px; /* flex-grow, flex-shrink, flex-basis */
+    @media all and (min-width: $xl-min) {
+      flex-basis: 250px;
+    }
     img {
-      width: 80px;
+      width: 100%;
       height: auto;
-      @media all and (min-width: $md-min) {
-        width: 90px;
-      }
-      @media all and (min-width: $xl-min) {
-        width: 100px;
-      }
     }
   }
   .customer_contact {
@@ -1949,9 +1916,9 @@ text content field
     .badge_item {
       border-radius: $btnBorder_radius;
       padding: 1rem 1rem 1rem 0;
-         @media only screen and (min-width: $lg-min) {
-      padding: 1rem 2rem 1rem 0;
-    }
+      @media only screen and (min-width: $lg-min) {
+        padding: 1rem 2rem 1rem 0;
+      }
       img {
         border-radius: $btnBorder_radius;
         max-width: 90px;
@@ -2004,9 +1971,9 @@ contact_form_block
 ***********************/
 .contact_form {
   margin-bottom: 3rem;
-     @media only screen and (min-width: $lg-min) {
-     margin-bottom: 1rem;
-    }
+  @media only screen and (min-width: $lg-min) {
+    margin-bottom: 1rem;
+  }
   // Contact Form layout
   div.wpcf7 {
     max-width: 100%;

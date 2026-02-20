@@ -8,19 +8,18 @@ if (is_home() || is_archive()) {
 <div id="nav_wrap" class="">
     <div class="container">
         <nav class="main_menu" role="navigation" aria-label="Main Navigation">
-            <a class="logo_header" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Home page">
+               <div class="logo_header">
+            <a class="" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Home page">
                 <!--extra double size image for retina-->
                 <!-- <img
-                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_ligg_white.png"
-                            alt="Kindmarks logo" />  -->
-                <!-- <img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brandstamp_white.png"
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_transparent.png"
                     width="100" height="auto" alt="Kindmarks logo" /> -->
                       <img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/kindmarks_logo_tagline.png"
                     width="100" height="auto" alt="Kindmarks logo" />
                 <!-- <span class="sample_site">Sample site</span> -->
             </a>
+               </div>
 
             <div class="nav_links">
                 <?php  //wp_nav_menu();
@@ -31,7 +30,7 @@ if (is_home() || is_archive()) {
                 <section class="signup">
                     <ul>
                         <li>
-                            <a class="btn_link outline_color_lightgreen" href="<?php echo esc_url(home_url('#footer')); ?>"
+                            <a class="btn_link green" href="<?php echo esc_url(home_url('#footer')); ?>"
                                 aria-label="Kontakt">
                                 Kontakta Oss
                             </a>

@@ -27,7 +27,7 @@ $themecolorPink: #ff5c9f;
 $themecolorLightGreen: #d9fc83; //#daff7d;
 $themecolorLightGreenDarker: #a2e006; 
 
-$themecolorGreen: #00a87b;
+$themecolorGreen: #00a87b;  //#24945E; //
 $themecolorGreenDarker: #009970;
 $themecolorGreenDark: #184e4a;//  #234648; //#004d38; // #12312b;
 $purpleLight: #9966ff;
@@ -50,7 +50,7 @@ $themefont: "Manrope", "Helvetica", sans-serif;
 
 $iconsize: 1.8rem;
 $themeBorder_radius: 24px;
-$btnBorder_radius: 10px;
+$btnBorder_radius: $themeBorder_radius; //10px;
 // $themeBorder_radius: 0;
 // $btnBorder_radius: 40px;
 
