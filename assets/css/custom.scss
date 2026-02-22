@@ -1877,9 +1877,9 @@ text content field
     @media all and (max-width: $xs-max) {
       font-size: 1rem;
     }
-    @media all and (max-width: $xxxs-max) {
-      font-size: 0.9rem;
-    }
+    // @media all and (max-width: $xxxs-max) {
+    //   font-size: 0.9rem;
+    // }
     @media only screen and (min-width: $xl-min) {
       font-size: 1.2rem;
     }

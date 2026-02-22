@@ -2096,11 +2096,6 @@ text content field
     font-size: 1rem;
   }
 }
-@media all and (max-width: 380px) {
-  .footer_main .underscore_link {
-    font-size: 0.9rem;
-  }
-}
 @media only screen and (min-width: 1200px) {
   .footer_main .underscore_link {
     font-size: 1.2rem;
