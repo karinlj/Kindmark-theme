@@ -1,6 +1,6 @@
-# KL starter theme without blog
+# Kindmarks gardening theme
 
-Kindmarks gardening theme.
+Custom WordPress gardening theme built with ACF and SASS.
 
 ##### Url: 
 
