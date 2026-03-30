@@ -78,7 +78,7 @@ if (get_row_layout() == 'text_or_image_field') {
                                 <?php } ?>
                                 <?php if ($link_no_3) { ?>
                                     <a class="btn_link <?php echo $btn_class ?>" href="<?php echo $link_no_3['url']; ?>" target="<?php echo $link_no_3['target']; ?>"
-                                        rel="noopener noreferrer"><?php echo $link_no_2['title']; ?>
+                                        rel="noopener noreferrer"><?php echo $link_no_3['title']; ?>
                                     </a>
                                 <?php } ?>
                             </div>

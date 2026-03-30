@@ -581,9 +581,9 @@ h2 {
   }
 }
 h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   @media all and (min-width: $sm-min) {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
   @media all and (min-width: $lg-min) {
     font-size: 1.3rem;
@@ -1031,7 +1031,7 @@ main nav - default colors for white & lightgrey bg  ????
     li {
       a {
         text-transform: uppercase;
-        font-size: 14px;
+        font-size: 15px;
         letter-spacing: 0.5px;
         display: block;
         color: #fff;
