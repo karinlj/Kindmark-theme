@@ -1,8 +1,8 @@
 # Kindmarks gardening theme
 
-Custom WordPress gardening theme built with ACF and SASS.
+Modern, custom WordPress gardening theme of 2026, built with ACF and SASS.
 
-##### Url: 
+##### Url: https://www.kindmarkstradgardsanlaggning.se/
 
 ![Screenshot](/screenshot.jpg?raw=true "Screenshot")
 
